@@ -1,0 +1,1029 @@
+% \iffalse meta-comment
+%
+% Copyright 2006
+% CTEX.ORG and any individual authors listed elsewhere in this file.
+%
+% This file is part of the aias-e package project.
+% ------------------------------------------------
+%
+% It may be distributed under the conditions of the LaTeX Project Public
+% License, either version 1.2 of this license or (at your option) any
+% later version. The latest version of this license is in
+%    http://www.latex-project.org/lppl.txt
+% and version 1.2 or later is part of all distributions of LaTeX
+% version 1999/12/01 or later.
+%
+% \fi
+%
+%% \CharacterTable
+%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+%%
+%
+% \CheckSum{1092}
+%
+% \iffalse meta-comment
+%
+%<*driver>
+\ProvidesFile{aias-e.dtx}
+%</driver>
+%
+%<cls>\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+%<art>\ProvidesClass{aiase}
+%<col>\ProvidesClass{aiasecol}
+  [2007/09/12 v0.2j Advances in Atmospheric Sciences
+%<art>   article document class]
+%<col>   collection document class]
+%
+%<*driver>
+   bundle source file]
+%</driver>
+%
+%<*driver>
+\documentclass{ltxdoc}
+\usepackage{ctex}
+ \topmargin 1 true cm
+ \oddsidemargin 2.5 true cm
+ \evensidemargin 2.5 true cm
+ \textheight 21 true cm
+ \textwidth 14 true cm
+\EnableCrossrefs
+ %\DisableCrossrefs % Say \DisableCrossrefs if index is ready
+\CodelineIndex
+\RecordChanges      % Gather update information
+ %\OnlyDescription  % comment out for implementation details
+ %\OldMakeindex     % use if your MakeIndex is pre-v2.9
+\begin{document}
+  \DocInput{aias-e.dtx}
+\end{document}
+%</driver>
+%
+% \fi
+%
+%
+% \changes{v0.0}{2006/02/08}{Initial version}
+% \changes{v0.1}{2006/02/27}{Alpha version}
+% \changes{v0.2}{2006/11/23}{Beta version}
+% \changes{v0.2b}{2006/12/14}{Minor revisions in title format}
+% \changes{v0.2c}{2006/12/22}{Minor revisions in the font settings}
+%
+%
+% \DoNotIndex{\begin,\end,\begingroup,\endgroup}
+% \DoNotIndex{\ifx,\ifdim,\ifnum,\ifcase,\else,\or,\fi}
+% \DoNotIndex{\let,\def,\xdef,\newcommand,\renewcommand}
+% \DoNotIndex{\expandafter,\csname,\endcsname,\relax,\protect}
+% \DoNotIndex{\Huge,\huge,\LARGE,\Large,\large,\normalsize}
+% \DoNotIndex{\small,\footnotesize,\scriptsize,\tiny}
+% \DoNotIndex{\normalfont,\bfseries,\slshape,\interlinepenalty}
+% \DoNotIndex{\hfil,\par,\vskip,\vspace,\quad}
+% \DoNotIndex{\centering,\raggedright}
+% \DoNotIndex{\c@secnumdepth,\@startsection,\@setfontsize}
+% \DoNotIndex{\ ,\@plus,\@minus,\p@,\z@,\@m,\@M,\@ne,\m@ne}
+% \DoNotIndex{\@@par}
+%
+%
+% \GetFileInfo{aias-e.dtx}
+%
+%
+% \MakeShortVerb{\|}
+% \setcounter{StandardModuleDepth}{1}
+%
+%
+% \newcommand{\ctex}{\texttt{ctex}}
+% \newcommand{\ctexorg}{\texttt{ctex.org}}
+% \newcommand{\AiASe}{\texttt{AiAS-e}}
+%
+%
+% \setlength{\parskip}{0.75ex plus .2ex minus .5ex}
+% \renewcommand{\baselinestretch}{1.2}
+%
+%
+% \makeatletter
+% \def\parg#1{\mbox{$\langle${\it #1\/}$\rangle$}}
+% \def\@smarg#1{{\tt\string{}\parg{#1}{\tt\string}}}
+% \def\@marg#1{{\tt\string{}{\rm #1}{\tt\string}}}
+% \def\marg{\@ifstar\@smarg\@marg}
+% \def\@soarg#1{{\tt[}\parg{#1}{\tt]}}
+% \def\@oarg#1{{\tt[}{\rm #1}{\tt]}}
+% \def\oarg{\@ifstar\@soarg\@oarg}
+% \makeatother
+%
+%
+% \title{\bf \AiASe~宏包说明\thanks
+%   {本文件版本号为~\fileversion{}，最后修改日期~\filedate{}。}}
+% \author{\it 吴凌云\thanks{aloft@ctex.org}}
+% \date{\small 打印日期：~\today}
+% \maketitle
+%
+%
+% \begin{abstract}
+% \AiASe~宏包是《大气科学进展》论文投稿的~\LaTeX{}~文档类。
+%
+% \AiASe~宏包由~\ctexorg{}~制作并负责维护。
+% \end{abstract}
+%
+%
+% \tableofcontents
+%
+%
+%
+%
+% \StopEventually{
+% } ^^A end StopEventually
+%
+%
+%
+%
+% \section{源代码说明}
+%
+%
+% \subsection{选项}
+%
+% 是否生成索引
+%    \begin{macrocode}
+%<*col>
+\newif\ifaias@makeindex \aias@makeindexfalse
+\DeclareOption{index}{\aias@makeindextrue}
+%</col>
+%    \end{macrocode}
+%
+%
+% \subsection{底层文档类}
+%
+% aiase~和~aiasecol~文档类底层使用~article~文档类
+%    \begin{macrocode}
+%<*art|col>
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
+\PassOptionsToClass{10pt,twoside}{article}
+\ProcessOptions
+\LoadClass{article}
+%</art|col>
+%    \end{macrocode}
+%
+%
+% \subsection{基本环境}
+%
+%
+% \changes{2007/01/12}{v0.2g}{加入单双栏设置的判断}
+% 当前的双栏设置
+%    \begin{macrocode}
+%<*art>
+\newif\ifaias@onecolumn \aias@onecolumntrue
+%</art>
+%    \end{macrocode}
+%
+% aiase~文档类设置中文环境
+%    \begin{macrocode}
+%<*art|col>
+\def\aias@beginCJK{%
+  \begin{CJK*}{GBK}{rm}\CJKtilde
+}
+\def\aias@endCJK{%
+%<*art>
+  \OneColumn
+  \label{lastpage}
+%</art>
+  \clearpage
+  \end{CJK*}
+}
+%</art|col>
+%    \end{macrocode}
+%
+% 使中文环境生效
+%    \begin{macrocode}
+%<*art|col>
+\let\aias@begindocumenthook\@begindocumenthook
+\let\aias@enddocumenthook\@enddocumenthook
+\def\AtBeginDocument{\g@addto@macro\aias@begindocumenthook}
+\def\AtEndDocument{\g@addto@macro\aias@enddocumenthook}
+\def\@begindocumenthook{\aias@begindocumenthook\aias@beginCJK}
+\def\@enddocumenthook{\aias@endCJK\aias@enddocumenthook}
+%</art|col>
+%    \end{macrocode}
+%
+%
+% \subsection{外围宏包}
+%
+% aiase~文档类缺省使用的宏包
+%    \begin{macrocode}
+%<*art>
+\RequirePackage{CJK,natbib,indentfirst,url}
+\RequirePackage{multicol,float,fancyhdr}
+\RequirePackage{graphicx,subfigure,picins}
+\RequirePackage{amsmath,amsthm,amssymb,amsfonts}
+\RequirePackage{textcomp}
+\RequirePackage{ifpdf}
+%</art>
+%    \end{macrocode}
+%
+% aiasecol~文档类使用的宏包
+%    \begin{macrocode}
+%<*col>
+\RequirePackage{CJK,type1cm,makeidx}
+\RequirePackage{multicol,float,fancyhdr}
+\RequirePackage{ifpdf}
+%</col>
+%    \end{macrocode}
+%
+%
+% \subsection{页面参数}
+%
+% \changes{2007/01/09}{v0.2f}{使用~ifpdf~宏包来判断是否使用~pdfTeX~直接生成~PDF~文件}
+%    \begin{macrocode}
+%<*art|col>
+\paperheight 297mm%
+\paperwidth  210mm%
+\ifpdf   % We're running pdfTeX in PDF mode
+  \setlength\pdfpagewidth{\paperwidth}%
+  \setlength\pdfpageheight{\paperheight}%
+\else
+  \AtBeginDvi{\special{papersize=\the\paperwidth,\the\paperheight}}
+\fi
+\textheight      240mm%
+\textwidth       170mm%
+\topmargin       -.3mm%
+\oddsidemargin     0mm%
+\evensidemargin    0mm%
+\columnsep         5mm%
+\headheight 15pt
+\headsep 12pt
+\parskip \z@ plus \z@ minus \z@
+%</art|col>
+%    \end{macrocode}
+%
+%
+% \subsection{单双栏设置}
+%
+% \changes{2007/01/12}{v0.2g}{加入单双栏设置命令}
+% 单双栏设置命令
+%    \begin{macrocode}
+%<*art>
+\newcommand*\OneColumn{%
+  \ifaias@onecolumn\else
+    \end{multicols}
+    \aias@onecolumntrue
+  \fi}
+\newcommand*\MultiColumns[1][2]{%
+  \ifaias@onecolumn
+    \begin{multicols}{#1}
+    \aias@onecolumnfalse
+  \else
+    \end{multicols}
+    \begin{multicols}{#1}
+    \aias@onecolumnfalse
+  \fi}
+%</art>
+%    \end{macrocode}
+%
+%
+% \subsection{期刊信息}
+%
+% 年份/期号
+%    \begin{macrocode}
+%<*art|col>
+\def\aias@year{2006}
+\def\aias@volume{22}
+\def\aias@number{1}
+%</art|col>
+%    \end{macrocode}
+%
+% 期号设置命令
+%    \begin{macrocode}
+%<*art|col>
+\newcommand*\Volume[3][\the\year]{%
+  \def\aias@year{#1}%
+  \def\aias@volume{#2}%
+  \def\aias@number{#3}%
+}
+%</art|col>
+%    \end{macrocode}
+%
+% 月份设置命令
+%    \begin{macrocode}
+%<*art|col>
+\newcommand*\Month[1]{%
+  \def\aias@month{#1}%
+}
+%</art|col>
+%    \end{macrocode}
+%
+% 设置页码的命令
+%    \begin{macrocode}
+%<*art|col>
+\newcommand*\Page[1]{\setcounter{page}{#1}}
+%</art|col>
+%    \end{macrocode}
+%
+%
+% \subsection{页眉页脚}
+%
+% 首页页眉页脚
+%    \begin{macrocode}
+%<*art|col>
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+%</art|col>
+%    \end{macrocode}
+%
+% 页眉中的文题和作者
+%    \begin{macrocode}
+%<*art|col>
+\let\aias@titlemark\@empty
+\newcommand\titlemark[1]{\gdef\aias@titlemark{#1}}
+\let\aias@authormark\@empty
+\newcommand\authormark[1]{\gdef\aias@authormark{#1}}
+%</art|col>
+%    \end{macrocode}
+%
+% 普通页页眉页脚
+% \changes{v0.2k}{2008/03/02}{Remove the MakeUpperCase in the head}
+%    \begin{macrocode}
+%<*art|col>
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}%
+\renewcommand{\footrulewidth}{0pt}%
+\fancyhead[RE]{\footnotesize VOL. \aias@volume}
+\fancyhead[LO]{\footnotesize NO. \aias@number}
+\fancyhead[CE]{\footnotesize\aias@titlemark}
+\fancyhead[CO]{\footnotesize\aias@authormark}
+\fancyhead[LE,RO]{\thepage}
+%</art|col>
+%    \end{macrocode}
+%
+% 脚注设置
+% \changes{v0.2e}{2006/12/27}{Change the footnote symbol}
+%    \begin{macrocode}
+%<*art|col>
+\renewcommand\thefootnote{\@alph\c@footnote}
+%</art|col>
+%    \end{macrocode}
+%
+%
+% \subsection{标题}
+%
+% 期刊信息
+%    \begin{macrocode}
+%<*art|col>
+\def\aias@pubinfo#1#2{%
+ADVANCES IN ATMOSPHERIC SCIENCES,
+VOL. \aias@volume, NO. \aias@number, \aias@year,
+#1--#2}
+%</art|col>
+%    \end{macrocode}
+%
+% 作者信息
+%    \begin{macrocode}
+%<*art|col>
+\newcommand\address[1]{\gdef\@address{#1}}
+%<art>\def\@address{\@latex@warning@no@line{No \noexpand\address given}}
+%<col>\let\@address\@empty
+\let\@date\@empty
+\newcommand\zipcode[1]{\mbox{\rm #1}}
+%</art|col>
+%    \end{macrocode}
+%
+% 产生标题
+% \changes{v0.2b}{2006/12/14}{Add space before title}
+% \changes{v0.2b}{2006/12/14}{Add space between addresses}
+% \changes{v0.2b}{2006/12/14}{Change addresses font from normalsize to small}
+%    \begin{macrocode}
+%<*art|col>
+\def\@maketitle{%
+  \begingroup
+    \let\footnote\thanks
+    \noindent
+%<*art>
+    \raisebox{25\p@}[0\p@][0\p@]{\parbox[t]{\textwidth}
+      {\footnotesize\aias@pubinfo{\thepage}{\pageref{lastpage}}}}%
+%</art>
+%<*col>
+    \raisebox{25\p@}[0\p@][0\p@]{\parbox[t]{\textwidth}
+      {\footnotesize\aias@pubinfo{\theaias@firstpage}{\theaias@lastpage}}}%
+%</col>
+    \begin{center}\vskip -10\p@\bfseries\Large%
+      \@title%
+      \vskip 12\p@
+      \normalfont\normalsize
+      \@author\vskip 5\p@%
+      \it\small\renewcommand{\baselinestretch}{1.5}\selectfont%
+      \@address\vskip 9\p@%
+      \normalfont\@date\par
+    \end{center}%
+  \endgroup
+%<*col>
+  \setcounter{page}{\theaias@firstpage}
+  \addcontentsline{toc}{title}{\@title}%
+  \addcontentsline{toc}{author}{\protect\numberline{}\@author}%
+%</col>
+%<*art>
+  \@abstract
+  \mainrule
+%</art>
+}
+%</art|col>
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%<*art|col>
+\renewcommand\maketitle{\par
+  \begingroup
+    \renewcommand\thefootnote{\@fnsymbol\c@footnote}%
+    \def\@makefnmark{\rlap{\@textsuperscript{\normalfont\@thefnmark}}}%
+    \long\def\@makefntext##1{\parindent 1em\noindent
+            \hb@xt@1.8em{%
+                \hss\@textsuperscript{\normalfont\@thefnmark}}##1}%
+    \if@twocolumn
+      \ifnum \col@number=\@ne
+        \@maketitle
+      \else
+        \twocolumn[\@maketitle]%
+      \fi
+    \else
+      \newpage
+      \global\@topnum\z@   % Prevents figures from going at top of page.
+      \@maketitle
+    \fi
+    \thispagestyle{plain}\@thanks
+  \endgroup
+  \setcounter{footnote}{0}%
+  \global\let\@thanks\@empty
+  \global\let\@title\@empty
+  \global\let\@author\@empty
+  \global\let\@address\@empty
+  \global\let\@date\@empty
+%<*art>
+  \global\let\thanks\relax
+  \global\let\title\relax
+  \global\let\author\relax
+  \global\let\address\relax
+  \global\let\date\relax
+  \global\let\@abstract\@empty
+  \global\let\@keywords\@empty
+  \global\let\abstract\relax
+  \global\let\keywords\relax
+  \global\let\@maketitle\relax
+  \global\let\maketitle\relax
+  \global\let\and\relax
+  \MultiColumns[2]
+%</art>
+%<col>  \clearpage
+}
+%</art|col>
+%    \end{macrocode}
+%
+%
+% \subsection{摘要和关键词}
+%
+% 摘要和关键词
+%    \begin{macrocode}
+%<*art>
+\let\@abstract\@empty
+\let\@keywords\@empty
+\let\@doi\@empty
+%</art>
+%    \end{macrocode}
+%
+% 定义摘要
+%    \begin{macrocode}
+%<*art>
+\renewcommand\abstract[1]{
+  \def\@abstract{%
+    \quotation\item\relax\small
+    \vskip -10\p@\centerline{\bf ABSTRACT}\vskip 3\p@
+    #1\par
+    \vskip 7\p@\@keywords\@doi
+    \vskip\baselineskip\endquotation}}
+%</art>
+%    \end{macrocode}
+%
+% 定义关键词
+% \changes{v0.2b}{2006/12/14}{Hang indent after key words}
+%    \begin{macrocode}
+%<*art>
+\newcommand\keywords[1]{
+  \def\@keywords{%
+    \begingroup
+    \settowidth{\@tempdima}{\textbf{Key words}:}
+    \list{}{\leftmargin\@tempdima
+            \itemindent-\leftmargin
+            \labelwidth\z@
+            \advance\leftmargin\labelsep}
+    \item[\textbf{Key words}:]
+    #1\par\endlist
+    \endgroup}}
+%</art>
+%    \end{macrocode}
+%
+% DOI
+%    \begin{macrocode}
+%<*art>
+\newcommand\doi[1]{
+  \def\@doi{%
+    \noindent\textbf{DOI}: #1\par}}
+%</art>
+%    \end{macrocode}
+%
+% 分隔线
+%    \begin{macrocode}
+%<*art>
+\newcommand\mainrule{%
+  \begin{center}
+  \rule{0.3\textwidth}{2pt}
+  \end{center}
+  \vspace*{2ex}}
+%</art>
+%    \end{macrocode}
+%
+%
+% \subsection{小节标题}
+%
+% 小节标题
+%    \begin{macrocode}
+%<*art>
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-\baselineskip}%
+                                   {\baselineskip}%
+                                   {\normalfont\normalsize\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-.5\baselineskip}%
+                                     {.5\baselineskip}%
+                                     {\normalfont\normalsize\bfseries\itshape}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                     {-.5\baselineskip}%
+                                     {.25\baselineskip}%
+                                     {\normalfont\normalsize\itshape}}
+%</art>
+%    \end{macrocode}
+%
+% 标题编号
+%    \begin{macrocode}
+%<*art>
+\newcommand\aias@thesection{\@arabic\c@section.}
+\newcommand\aias@thesubsection{\mbox{\bf\thesection.\@arabic\c@subsection}}
+\newcommand\aias@thesubsubsection{\mbox{\rm\thesubsection.\@arabic\c@subsubsection}}
+\def\@seccntformat#1{\csname aias@the#1\endcsname\quad}
+%</art>
+%    \end{macrocode}
+%
+%
+% \subsection{图表环境}
+%
+% 单栏图表
+%    \begin{macrocode}
+%<*art>
+\renewenvironment{figure}
+               {\@float{figure}[H]}
+               {\end@float}
+\renewenvironment{table}
+               {\@float{table}[H]\small}
+               {\end@float}
+\renewenvironment{table*}
+               {\@ifnextchar[{\aias@xdblfloat{table}}{\aias@dblfloat{table}}}
+               {\end@dblfloat}
+\def\aias@xdblfloat#1[#2]{\@dblfloat{#1}[#2]\small}
+\def\aias@dblfloat#1{\@dblfloat{#1}\small}
+\newenvironment{widetabular}[2][\linewidth]
+  {\begin{tabular*}{#1}{@{\space\extracolsep{\fill}}#2@{\space}}}
+  {\end{tabular*}}
+%</art>
+%    \end{macrocode}
+%
+% 图表标题
+%    \begin{macrocode}
+%<*art>
+\renewcommand\figurename{Fig.}
+\renewcommand\tablename{Table}
+%</art>
+%    \end{macrocode}
+%
+% 图表标题格式
+%    \begin{macrocode}
+%<*art>
+\long\def\aias@makefigcaption#1#2{%
+  \abovecaptionskip \baselineskip%
+  \belowcaptionskip \z@%
+  \vskip\abovecaptionskip\small
+  \list{}{\leftmargin \aias@figmargin\rightmargin\leftmargin%
+          \topsep\z@\partopsep\z@\itemsep\z@\parsep\z@}%
+  \item\relax
+  \sbox\@tempboxa{\mbox{\bf #1.} #2}%
+  \ifdim \wd\@tempboxa >\hsize
+    \mbox{\bf #1.} #2\par
+  \else
+    \global \@minipagefalse
+    {\hfil\box\@tempboxa\hfil}%
+  \fi
+  \endlist
+  \vskip\belowcaptionskip}
+\long\def\aias@maketabcaption#1#2{%
+  \abovecaptionskip \z@%
+  \belowcaptionskip .5\baselineskip%
+  \vskip\abovecaptionskip\small
+  \mbox{\bf #1.} #2\par
+  \vskip\belowcaptionskip}
+%</art>
+%    \end{macrocode}
+%
+% 图表标题命令
+%    \begin{macrocode}
+%<*art>
+\newdimen\aias@figwidth
+\newdimen\aias@figmargin
+\newcommand\figcaption[2][\linewidth]{%
+  \setlength\aias@figwidth{#1}
+  \aias@figmargin\linewidth
+  \advance\aias@figmargin-\aias@figwidth
+  \divide\aias@figmargin 2
+  \let\aias@makecaption\@makecaption%
+  \let\@makecaption\aias@makefigcaption%
+  \caption{#2}%
+  \let\@makecaption\aias@makecaption%
+}
+\newcommand\tabcaption[1]{%
+  \let\aias@makecaption\@makecaption%
+  \let\@makecaption\aias@maketabcaption%
+  \caption{#1}%
+  \let\@makecaption\aias@makecaption%
+}
+%</art>
+%    \end{macrocode}
+%
+% 续图
+%    \begin{macrocode}
+%<*art>
+\newcommand\figcontinue{\addtocounter{figure}{-1}}
+%</art>
+%    \end{macrocode}
+%
+% 表注
+% \changes{v0.2d}{2006/12/26}{Remove the beginning word ``Note:''}
+%    \begin{macrocode}
+%<*art>
+\newcommand\tabnote[1]{%
+  \begingroup
+    \footnotesize
+    \vskip\baselineskip
+    \parindent\z@
+    #1
+  \endgroup
+}
+%</art>
+%    \end{macrocode}
+%
+% 表格线
+%    \begin{macrocode}
+%<*art>
+\def\toprule{\noalign{\ifnum0=`}\fi \hrule \@height 0.75pt \hrule \@height 3pt \@width 0pt \futurelet
+   \@tempa\@xhline}
+\def\midrule{\noalign{\ifnum0=`}\fi \hrule \@height 3.25pt \@width 0pt \hrule \@height 0.5pt
+    \hrule \@height 3pt \@width 0pt \futurelet \@tempa\@xhline}
+\def\botrule{\noalign{\ifnum0=`}\fi \hrule \@height 2.75pt \@width 0pt \hrule \@height 0.75pt \futurelet
+   \@tempa\@xhline}
+%</art>
+%    \end{macrocode}
+%
+% 控制浮动参数
+%    \begin{macrocode}
+%<*art>
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.65}
+\renewcommand{\floatpagefraction}{0.60}
+%</art>
+%    \end{macrocode}
+%
+% 图表上下文间距
+%    \begin{macrocode}
+%<*art>
+\textfloatsep \baselineskip
+\intextsep \baselineskip
+\floatsep \baselineskip
+\dbltextfloatsep \baselineskip
+\dblfloatsep \baselineskip
+%</art>
+%    \end{macrocode}
+%
+%
+% \subsection{数学公式}
+%
+% 公式上下文间距
+%    \begin{macrocode}
+%<*art>
+\abovedisplayskip .5\baselineskip
+\belowdisplayskip .5\baselineskip
+%</art>
+%    \end{macrocode}
+%
+%
+% \subsection{致谢}
+%
+%    \begin{macrocode}
+%<*art>
+\newenvironment{acknowledgements}{%
+  \vskip\baselineskip
+  \small\bfseries\itshape Acknowledgements.\quad
+  \small\normalfont\baselineskip=11pt}
+  {\normalsize\normalfont}%
+%</art>
+%    \end{macrocode}
+%
+%
+% \subsection{参考文献}
+%
+%    \begin{macrocode}
+%<*art>
+\renewcommand\refname{REFERENCES}
+%</art>
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%<*art>
+\renewenvironment{thebibliography}[1]
+     {\section*{\centering\small \refname}
+      \small\baselineskip=11pt%
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin 2em\itemindent-\leftmargin
+            \parsep\z@\itemsep\z@
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+%</art>
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%<*art>
+\bibsep\z@
+\def\bibfont{\small}
+%</art>
+%    \end{macrocode}
+%
+%
+% \subsection{附录}
+%
+% 附录设置
+%    \begin{macrocode}
+%<*art>
+\renewcommand\appendix{\par
+  \section*{\centering\small\rm APPENDIX}
+  \normalsize
+  \setcounter{equation}{0}%
+  \def\cl@section{\@elt{subsection}}%
+  \renewcommand\theequation{A\@arabic\c@equation}%
+  \setcounter{secnumdepth}{0}
+  \renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-\baselineskip}%
+                                   {\baselineskip}%
+                                   {\centering\normalfont\normalsize\bfseries}}
+  \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-.5\baselineskip}%
+                                     {.5\baselineskip}%
+                                     {\centering\normalfont\normalsize\bfseries\itshape}}
+  \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                     {-.5\baselineskip}%
+                                     {.25\baselineskip}%
+                                     {\centering\normalfont\normalsize\itshape}}
+}
+%</art>
+%    \end{macrocode}
+%
+%
+% \subsection{目录}
+%
+%    \begin{macrocode}
+%<*col>
+\renewcommand\@pnumwidth{2.45em}
+\def\aias@journaltitle{%
+  \begingroup
+    \vspace*{-15pt}
+    \Large\bf ADVANCES IN ATMOSPHERIC SCIENCES
+    \vskip 10pt
+    \large\bf Vol. \aias@volume \quad No. \aias@number \quad \aias@month\ \aias@year
+    \vskip 10pt
+    CONTENTS
+    \vskip 10pt
+  \endgroup
+}
+\renewcommand\tableofcontents{%
+  \newpage\pagestyle{empty}%
+  \begin{center}
+    \aias@journaltitle
+  \end{center}
+  \@starttoc{toc}%
+  \newpage\pagestyle{headings}%
+}
+%</col>
+%    \end{macrocode}
+%
+% 标题项
+%    \begin{macrocode}
+%<*col>
+\newcommand*\l@title[2]{%
+  \addpenalty{-\@highpenalty}% encourage page break
+  \addvspace{6\p@}%
+  \setlength\@tempdima{0em}%
+  \begingroup
+    \parindent \z@ \rightskip \@pnumwidth
+    \parfillskip -\@pnumwidth
+    \leavevmode
+    \leftskip 3em
+    \setlength{\@tempdima}{0pt}% eliminate any spaces here
+    \aias@toci{#1}{#2}
+    \penalty\@highpenalty      % discourage page break
+  \endgroup
+}
+\newcommand{\aias@toci}[2]{%
+  \advance\leftskip\@tempdima
+  \hskip -\leftskip
+  #1\nobreak
+  \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{$\cdot$}\mkern \@dotsep mu$}\hfill
+  \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+}
+%</col>
+%    \end{macrocode}
+%
+% 作者项
+%    \begin{macrocode}
+%<*col>
+\newcommand*\l@author[2]{%
+  \setlength\@tempdima{0em}%
+  \begingroup
+    \parindent \z@ \rightskip \@pnumwidth
+    \parfillskip -\@pnumwidth
+    \leavevmode
+    \leftskip 3em
+    \setlength{\@tempdima}{1.5em}% eliminate any spaces here
+    \itshape
+    \aias@tocii{#1}{}
+    \penalty\@highpenalty  % discourage page break
+  \endgroup
+}
+\newcommand\aias@tocii[2]{%
+  \advance\leftskip\@tempdima
+  \hskip -\leftskip
+  #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+}
+%</col>
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+%<*col>
+\renewcommand*\part[1]{%
+  \addcontentsline{toc}{part}{\protect\numberline{}#1}%
+}
+\renewcommand*\l@part[2]{%
+  \addpenalty{-\@highpenalty}% encourage page break
+  \addvspace{6\p@}%
+  \setlength\@tempdima{0em}%
+  \begingroup
+    \parindent \z@ \rightskip \@pnumwidth
+    \parfillskip -\@pnumwidth
+    \leavevmode
+    \leftskip 3em
+    \setlength{\@tempdima}{0em}% eliminate any spaces here
+    \bfseries
+    \aias@tocii{#1}{}
+    \penalty\@highpenalty  % discourage page break
+  \endgroup
+}
+%</col>
+%    \end{macrocode}
+%
+%
+% \subsection{索引}
+%
+%    \begin{macrocode}
+%<*col>
+\newcounter{aias@firstpage}
+\newcounter{aias@lastpage}
+\newcommand*\PageRange[2]{%
+  \setcounter{page}{#1}%
+  \setcounter{aias@firstpage}{#1}%
+  \setcounter{aias@lastpage}{#2}%
+}
+%</col>
+%    \end{macrocode}
+%
+%
+% \changes{v0.2h}{2007/08/11}{Minor revisions in the index settings}
+% \changes{v0.2i}{2007/08/18}{Record first author}
+% \changes{v0.2j}{2007/09/12}{Fix problems with single author}
+% \changes{v0.2k}{2008/03/02}{Identify first author automatically or by given}
+% \changes{v0.2k}{2008/03/02}{Change the font of first author to bold}
+%    \begin{macrocode}
+%<*col>
+\let\aias@firstauthor\@empty
+\let\aias@otherauthor\@empty
+\def\aias@defauthors#1;#2\relax{%
+  \gdef\aias@firstauthor{#1}%
+  \gdef\aias@otherauthor{#2}}
+\newcommand*\FirstAuthorIndex[2][\@empty]{%
+  \ifx#1\@empty\aias@defauthors#2;\relax\else
+    \gdef\aias@firstauthor{#1}
+    \gdef\aias@otherauthor{#2;}\fi
+  \IndexRange{\aias@firstauthor; \aias@otherauthor \@title
+    @\textbf{\aias@firstauthor;} \aias@otherauthor\space{\@title};
+     \string\aiasnumber{\aias@number}}
+    {\theaias@firstpage}{\theaias@lastpage}
+}
+\newcommand*\AuthorIndex[2][\aias@firstauthor]{%
+  \IndexRange{#2 @#2; \string\see{#1\space{et al.};\space}
+    \string\aiasnumber{\aias@number}}
+    {\theaias@firstpage}{\theaias@lastpage}
+}
+\newcommand*\Index[2]{%
+  \aias@index{#1}{#2}}
+\newcommand*\IndexRange[3]{%
+  \aias@index{#1|(}{#2}
+  \aias@index{#1|)}{#3}}
+\renewcommand*\see[1]{see #1}
+\newcommand*\aiasnumber[1]{(#1)}
+%</col>
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+%<*col>
+\ifaias@makeindex
+  \makeindex
+  \def\aias@index#1#2{%
+    \@bsphack\begingroup\@sanitize
+    \protected@write\@indexfile{}%
+      {\string\indexentry{#1}{#2}}%
+    \endgroup\@esphack}
+\else
+  \def\aias@index#1#2{}
+\fi
+%</col>
+%    \end{macrocode}
+%
+%
+%    \begin{macrocode}
+%<*col>
+\renewenvironment{theindex}
+               {\@makeindextitle
+                \authormark{Index}\titlemark{Index}
+                \thispagestyle{plain}\parindent\z@
+                \let\indexspace\relax
+                \let\item\@idxitem
+                \begin{multicols}{2}}
+               {\label{lastindex}\end{multicols}\clearpage}
+\def\@makeindextitle{%
+  \newpage
+  \global\@topnum\z@   % Prevents figures from going at top of page.
+  \begingroup
+    \let\footnote\thanks
+    \noindent
+    \raisebox{25\p@}[0\p@][0\p@]{\parbox[t]{\textwidth}
+      {\footnotesize\aias@pubinfo{\thepage}{\pageref{lastindex}}}}%
+    \begin{center}\vskip -20\p@\bfseries\Large%
+      Index to Vol. \aias@volume%
+    \end{center}%
+  \endgroup
+}
+\renewcommand\@idxitem{\par\hangindent 15\p@}
+%</col>
+%    \end{macrocode}
+%
+%
+%
+%
+% \Finale
+%
+% \setcounter{IndexColumns}{2}
+% \IndexPrologue{\section*{索引} {\it 意大利体的数字表示描述对应索引项的页码；
+%                带下划线的数字表示定义对应索引项的代码行号；
+%                罗马字体的数字表示使用对应索引项的代码行号。}}
+%
+% \GlossaryPrologue{\section*{版本更新}}
+%
+% \PrintIndex \PrintChanges
+\endinput
