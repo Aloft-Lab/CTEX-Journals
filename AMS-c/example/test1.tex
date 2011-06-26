@@ -1,0 +1,913 @@
+\documentclass{amsc}
+
+
+\begin{document}
+
+
+\Volume{2010}{12}{53}{12}
+\PageNum{125}
+\PaperID{0583-1431(2011)01-0125-12}
+\DocumentCode{A}
+
+\EditorNote{收稿日期:\, 2010-03-20;\ 接受日期:\ 2010-07-23}
+\EditorNote{基金项目:国家自然科学基金资助项目(10801006,
+10971055);应用数学湖北省重点实验室开放课题项目}
+
+\TitleMark{聂昌雄等:共形空间中具有平行的共形第二基本形式的I型类时超曲面的分类}
+
+\TitleHeader
+
+
+\Title{共形空间中具有平行的共形第二
+ 基本形式的\\[1mm]I型类时超曲面的分类}
+ 
+\Author{聂昌雄}
+{湖北大学数学与计算机科学学院 \ 武汉  \ 430062\\
+北京大学数学科学学院 \ 北京 \ 100871\\
+E-mail: niecx@pku.org.cn}
+\Author{田大平}
+{湖北大学数学与计算机科学学院 \ 武汉  \ 430062\\
+E-mail: tiandp@hubu.edu.cn}
+\Author{吴传喜}
+{湖北大学数学研究所 \ 武汉  \ 430062\\
+E-mail: cxwu@hubu.edu.cn}
+
+
+\Abstract{共形空间中具有平行的共形第二基本形式的类空超曲面
+已经作了完全分类, 本文将继续类时情形的探讨并对此时的I型
+类时超曲面分类.}
+\Keywords{共形空间; 共形不变量; 共形第二基本形式; I型类时超曲面}
+\Keywords[MR(2010)主题分类]{53A30}
+\Keywords[中图分类]{O186.1}
+
+
+
+\ETitle{Classification of Type I Time-Like Hyperspaces with Parallel Conformal
+Second\\[1mm]
+Fundamental Forms in the  Conformal Space}
+
+\EAuthor{Chang Xiong NIE}
+{School of Mathematics $\&$ Computer Sciences, Hubei
+University, Wuhan $430062$, P. R. China\\
+E-mail\,$:$ niecx@pku.org.cn}
+\EAuthor{Da Ping TIAN}
+{School of Mathematics  Sciences, Peking University, Beijing $100871$, P. R. China\\
+E-mail\,$:$ tiandp@hubu.edu.cn}
+\EAuthor{Chuan Xi WU}
+{Institute of Mathematics, Hubei University, Wuhan $430062$, P. R. China \\
+E-mail\,$:$ cxwu@hubu.edu.cn}
+
+\EAbstract{We have classified completely the space-like hypersurfaces with
+parallel conformal second fundamental forms in the  conformal space. In this work,
+we study the time-like case and classify the Type I time-like
+hypersurfaces with parallel conformal second fundamental forms.}
+
+\EKeywords{the  conformal space; the conformal invariants;
+the conformal second fundamental form; type I time-like hypersurfaces}
+\EKeywords[MR(2010) Subject Classification]{53A30}
+\EKeywords[Chinese Library Classification]{O186.1}
+
+\vskip .1in
+
+\Section[0]{引言}
+
+ 王长平、李海中、胡泽军等人对球面${\mathbb S}^{n+1}$的M\"obius等参超曲面的几何作了
+ 特定条件下的分类$^{[1-5]}$,
+  Lorentz空间形式中的共形等参超曲面则有聂昌雄$^{[6,\,7]}$等人进行了研究.
+ 本文旨在建立共形空间中类时超曲面的共形几何理论, 进而在共形等价意义下
+ 确定共形空间中具有平行的共形第二基本形式的类时超曲面, 本文解决了该类I型
+ 类时超曲面的分类. 而该类超曲面的
+ 类空情形已由聂昌雄和吴传喜解决$^{[6]}$.
+ 至于M\"obius几何(共形几何)的其他研究可见文[8--14].
+
+ 首先在$n+s$维欧氏空间$\mathbb R^{n+s}$上定义有$s$个负指标的Lorentz内积
+ $\langle \ , \ \rangle $如下
+ $$
+ \langle X,Y\rangle =\sum_{i=1}^nx_iy_i-\sum_{i=n+1}^{n+s} x_iy_i,\ \ X=(x_i),\ \ Y=(y_i)\in \mathbb R^{n+s},$$
+ 并将赋有$s$个负指标的Lorentz内积的$n+s$维欧氏空间$\mathbb R^{n+s}$称为Lorentz空间
+ $\mathbb R^{n+s}_s$. 本文的Lorentz空间形式包括三种空间:
+ Lorentz空间${\mathbb R}^{n+1} _1$,
+  de-Sitter空间${\mathbb S}^{n+1}_1$
+和反de-Sitter空间$\mathbb H^{n+1}_1$, 其中
+$$
+\mathbb{S}^{n+1}_1=\{u\in\mathbb{R}^{n+2}_1\,|\,\langle u
+,u\rangle =1\}, \quad \mathbb H^{n+1}_1=\{u\in\mathbb
+R^{n+2}_2\,|\,\langle u,u\rangle =-1\}.
+ $$
+类似地,我们称
+$$
+\mathbb{S}^{k}_1(a)=\{u\in\mathbb{R}^{k+1}_1\,|\,\langle u
+,u\rangle = a^2\}, \quad \mathbb H^{k}_1(a)=\{u\in\mathbb
+R^{k+1}_2\,|\,\langle u ,u\rangle =- a^2\}
+ $$
+ 为半径为$a$的($k$-维) de-Sitter球和反de-Sitter球.
+
+ 设$\mathbb RP^{n+2}$是$n+2$维实射影空间,
+  称$\mathbb RP^{n+2}$中的二次超曲面
+  $$\mathbb Q^{n+1}_1=
+  \{[\xi]\in\mathbb RP^{n+2}\,|\,\langle \xi,\xi\rangle  =0,\,
+  \xi\in\mathbb R^{n+3}_2\}$$
+  为共形空间. 设
+  $$C^{n+2}=\{\xi\in\mathbb R^{n+3}_2\,|\,\langle \xi,\xi\rangle =0,\,
+  \xi\neq0\}$$
+  是Lorentz空间
+  $\mathbb R^{n+3}_2$的光锥.
+ 它被赋予了一个退化的对称2-形式 (半黎曼度量)$\widetilde{h}$, 如下所言.
+ 设$u\in C^{n+1}$处的切空间有正交分解
+ $$\mathrm T_uC^{n+1}=\{
+ \xi\in\mathbb R^{n+2}_2\,|\,
+ \langle u,\xi\rangle =0\}=\mathbb Ru\oplus E^\bot_u.$$
+ 沿直线$\mathbb Ru$, $\mathbb R^{n+2}_2$的子空间
+ $E^\bot_{\lambda u}=E^\bot_u,\, \lambda\in\mathbb{R}\backslash\{0\}$.
+ 任给向量$\alpha,\beta\in E^\bot_u$, 定义
+ $$\widetilde{h}(\alpha,\beta)=\frac{2}{|u|^2}
+ \langle \alpha,\beta\rangle ,$$
+ 其中$|\cdot|^2$是$\mathbb R^{n+2}$的标准模长平方.
+ 我们知道, 通过黎曼淹没
+ $\pi:C^{n+2}\rightarrow\mathbb Q^{n+1}_1$会有
+ 共形空间$\mathbb Q^{n+1}_1$的标准度量
+  $h$. 一般来说我们更关心共形空间$\mathbb Q^{n+1}_1$的
+  共形类 $[h]=\{{\rm e}^{2\tau}h|$ $\tau\in C^\infty(\mathbb Q^{n+1}_1)$,
+  而已知共形空间$\mathbb Q^{n+1}_1$的共形群刚好是Lorentz群$O(n+1,2)/\{\pm 1\}$.
+
+ 我们发现共形空间$\mathbb Q^{n+1}_1$是三种Lorentz空间形式
+ 的共同的紧致化空间. 不仅如此, 还发现如果只研究共形几何,
+ Lorentz空间形式可看作嵌入共形空间$\mathbb Q^{n+1}_1$的子集,
+ 具体见本文第$2$节. 于是我们有如下的:
+
+{\HT 分类定理}\quad
+ 设 $x:\mathbf{M}^n\rightarrow \mathbb Q^{n+1}_1\ (n\geq3)$为共形空间$\mathbb
+  Q^{n+1}_1$中的正则类时超曲面, 并且具有平行的共形第二
+ 基本形式, 则当$x$是I型时, $x  ( \mathbf{M}  )  $局部上与下列标准嵌入超曲面之一共形等价:
+
+ (i) \ $\mathbb R_1^k\times\mathbb S^{n-k}
+    \subset\mathbb R^{n+1}_1$ 或  $\mathbb R^k\times\mathbb S_1^{n-k}
+    \subset\mathbb R^{n+1}_1$;
+
+ (ii) \ $\mathbb S_1^k(a)\times\mathbb S
+   ^{n-k}(      \sqrt{  1   -   a^2    } )
+    \subset\mathbb S^{n+1}_1$, 此时 $ 0  <  a  <  1   $;
+
+  (iii) \ $\mathbb S_1^k(a)\times\mathbb H
+   ^{n-k}(     \sqrt{  1   +   a^2    }  )
+    \subset\mathbb H^{n+1}_1$, 此时 $    a >0   $;
+ 或 $\mathbb H_1^k(a)\times\mathbb
+ S^{n-k}(     \sqrt{    a^2   -1 }   )
+ \subset\mathbb H^{n+1}_1 $, 此时
+
+ \qquad \ $ a>1   $;
+
+(iv) \ $WP(p,q,a)\subset\mathbb{R}^{n+1}_1,$
+$WP(p,q,a)$的定义见本文第$2$节.
+
+ \Section{共形空间中的类时超曲面的共形几何的基本理论}
+
+  设 $x:\mathbf{M}^n\rightarrow \mathbb Q^{n+1}_1$ (以下约定$n\geq3)$为共形空间$\mathbb
+  Q^{n+1}_1$中的类时超曲面, 即$x_*(TM)$在 $(T\mathbb Q^{n+1}_1,$ $h)$中是Lorentz子丛. 对Lorentz空间$\mathbb
+ R^{n+3}_2$中的光锥
+  $$C^{n+2}=\{\xi\in\mathbb R^{n+3}_2\,|\,\langle \xi,\xi\rangle
+  =0,\,
+  \xi\neq0\},$$
+   $y:\mathbf{U}\subset \mathbf{M}\rightarrow
+  C^{n+2}$是超曲面在 $\mathbf{M}$某个开子集
+  $\mathbf{U}$上定义的一个局部提升, 则 $\langle\mbox d  y,\mbox d  y\rangle   $是定义在
+  $\mathbf{U}$上的一个Lorentz度量. 设 $\Delta$是 关于
+  $\langle\mbox d  y,\mbox d  y\rangle  $的Laplace 算子, $\kappa $
+  是关于 $\langle\mbox d  y,\mbox d  y\rangle  $
+   的法化数量曲率. 类似于文[8,定理1.2]的证明(亦可见文[6,\,7]),
+  我们有:
+
+  {\bf 定理1.1}\quad $\mathbb Q^{n+1}_1$的类时超曲面
+  $\mathbf{M} $上有一个整体定义的 2阶对称张量
+  $$g=(\langle\Delta y,\Delta y\rangle  -n^2\kappa  )
+  \langle \mathrm{d}y, \mathrm{d}y\rangle   ,\eqno(1.1)$$
+  并且 $g $是共形不变的.
+
+  {\bf 定义  1.1}\quad
+  如果在$\mathbb Q^{n+1}_1$的类时超曲面 $\mathbf M$上, 对任意局部提升
+  $y:\mathbf{U}\subset\mathbf M\rightarrow C^{n+1}$, 局部函数
+  $\langle\Delta y$, $\Delta y\rangle  -n^2\kappa
+  \neq0$,
+  则称 $x$是 $\mathbb Q^{n+1}_1$  的正则类时超曲面,
+  并且把 $g$叫做正则类时超曲面 $x$的共形度量.
+
+   {\bf 注记 1.1}\quad
+  如果$\mathbf M$是三种Lorentz空间形式中的全脐超曲面,
+  则上面的张量$g\equiv0.$  本文的研究将剔除这种特殊情况.
+
+  {\bf 注记 1.2}\quad
+ 从命题2.1和引理3.1我们知道, 如果$x$是 $\mathbb Q^{n+1}_1$  的I, III, IV型连通正则类时超曲面,
+ 在 $M$ 上 $\langle\Delta y$, $\Delta y\rangle  -n^2\kappa
+  $恒大于0.
+
+  因此我们有:
+
+   {\bf 定义 1.2}\quad 如果$x$是 $\mathbb Q^{n+1}_1$  的I, III,
+IV型连通正则类时超曲面,
+  $M$上的整体提升
+  $$Y= \sqrt{ \langle\Delta y,\Delta y\rangle  -n^2\kappa   }
+  y :{\bf M}\rightarrow C^{n+2}$$
+  称为$x$的典则提升.
+
+   {\bf 定义 1.3}\quad  对两张正则类时超曲面$x,\widetilde x:\mathbf
+ M\rightarrow \mathbb Q^{n+1}_1$的典则提升$Y,\widetilde{Y}$, 若存在$T\in O(n+1,2)$,使
+ $\widetilde{Y}=T\circ Y$, 则称两超曲面$x,\widetilde x$共形等价.
+
+    没有特别声明,
+   今后我们约定 $x:\mathbf M\rightarrow \mathbb
+ Q^{n+1}_1$是正则类时超曲面. 我们先设
+  $$ {\rm e}^{2\tau}= \langle\Delta y,\Delta y\rangle
+   -n^2\kappa  >0,$$
+  我们知道, 在相差$\pm$的情况下,
+  存在唯一的典则提升 $Y:\mathbf M\rightarrow C^{n+2}$,
+  使共形度量 $g=\langle\mbox d  Y,\mbox d  Y\rangle$.
+  另外, 因为$Y$是典型提升, 我们有
+ $$\langle\Delta Y, \Delta Y\rangle  = n^2\kappa +1, \eqno{(1.2)} $$
+ 其中$\Delta,\kappa $分别是度量$g$的Laplace 算子和法化数量曲率.
+ 设$\{e_1, \ldots, e_{n}\}$是 $\mathbf
+ M$ 的一个局部基, 其对偶基为
+ $\{\omega^1, \ldots, \omega^{n}\}$.  令
+$Y_i=e_i(Y),\, g_{ij}=g(e_i,e_j)$, 则有 $\langle Y_i,Y_j\rangle
+=g_{ij}, \, 1\leq i,\, j\leq n. $ 定义
+$$N:=-\frac{1}{n}(\Delta Y+\frac{1}{2n}
+ \langle\Delta Y, \Delta Y\rangle  Y), \eqno{(1.3)}$$
+ 则由$\langle\Delta Y,   Y\rangle  =-n,\langle\Delta Y,   Y_k\rangle
+ =0$可知
+  $$\langle N, Y\rangle  =1,\ \  \langle N, N\rangle  =0,\ \ \langle N, Y_k\rangle  =0,\ \ 1\leq k\leq
+  n,
+   \eqno{(1.4)}$$
+      故 $\mathbb R^{n+3}_2$可正交分解为
+  $$\mathbb R^{n+3}_2=\mathrm{span}\{Y, N\}\oplus \mathrm{span}
+  \{Y_1, \ldots, Y_{n}\}\oplus\mathbb V,\eqno{(1.5)}$$
+  我们称
+    $\mathbb V$是 $x:\mathbf M\rightarrow \mathbb Q^{n+1}_1$的共形法丛.
+     $\mathbb V$是类空的线丛. 设
+      $\xi$ 是共形法丛 $\mathbb V$的一个单位基,
+  使$\langle \xi,\xi\rangle  =1$.
+ 沿 $\mathbf M$,我们有 $\mathbb R^{n+3}_2$中的一个活动
+ 标架 $\{Y, N, Y_1, \ldots,$
+ $ Y_{n},  \xi\}$. 本文约定指标范围如下
+ $$1\leq i, j, k, l, t\leq n.
+  $$ 结构方程可写为
+ $$
+ \align
+ &\mbox d  Y=\sum_i\omega^iY_i,\quad
+ \mbox d  N=\sum_i\psi^iY_i+  \phi\xi,\quad
+ {\mbox d  }\xi=-\phi  Y  -  \sum_{i }B^iY_i ,\tag1.6\\
+ &\mbox d  Y_i=-\psi_iY-\omega_iN+\sum_j\omega_{i}^{j}Y_j+
+   B_i\xi.\tag1.7
+   \endalign
+   $$
+     对这些方程外微分, 有
+ $$
+ \align
+ &{\mbox d  }\omega^i+\sum_j\omega^i_{j}\wedge\omega^j=0,\quad
+ {\mbox d  }\omega^i_{j}  +  \sum_k\omega^i_{k}\wedge\omega^k_j
+ =B^i\wedge B_j+
+ \omega^i\wedge\psi_j
+ + \psi^i\wedge\omega_j,\tag1.8\\
+ &{\mbox d  }\psi_i
+  =\sum_j\omega_{i}^{j}\wedge\psi_j+
+ B_i\wedge\phi,\quad \mbox d  B_i = \sum_{j}
+  \omega_{i}^{j}\wedge
+  B_j+\phi\wedge\omega_i
+  , \quad{\mbox d  }\phi=\sum_i \psi_i\wedge B^i.\tag1.9\\
+ &\sum_i\omega^i\wedge\psi_i=0 ,\quad \sum_i\omega^i\wedge
+B_i=0 ,\tag1.10
+ \endalign
+ $$
+   设 $$\psi_i=\sum_jA_{ij}\omega^j,\ \
+   \psi^i=\sum_jA^i_j\omega^j,\ \
+B_i=\sum_jB_{ij}\omega^j,\ \ B^i=\sum_jB^i_j\omega^j,\ \
+\phi=\sum_i
+  C^i\omega_i,$$ 由    Cartan
+引理及(1.10),我们得到
+   $$  A_{ij}=A_{ji},\ \ B_{ij}=B_{ji}
+  . \eqno{(1.11)}$$
+    易知
+ $$\mathbb A:=\langle {\mbox d  } N , {\mbox d  } Y \rangle
+ = \sum_i\psi_i\otimes\omega^i, \quad
+   \mathbb B:= -\langle {\mbox d  } \xi , {\mbox d  } Y \rangle
+ = \sum_{i }B_i\otimes\omega^i, \quad
+  \phi = -\langle {\mbox d  } \xi , N \rangle
+  \eqno{(1.12)}$$
+  是整体定义的共形不变量.
+  定义这些张量关于共形度量$g$的协变微分和关于共形度量$g$的曲率张量:
+    $$
+    \align
+    &\sum_jC_{ij}\omega^j=\mbox d  C _i-\sum_jC _j\omega_i^j
+    ;\tag1.13\\
+  &\sum_kA_{ijk}\omega^k=
+    \mbox d  A_{ij}-\sum_kA_{ik}\omega^k_j
+   -\sum_kA_{kj}\omega^\kappa _i;\tag1.14\\
+   &\sum_kB_{ijk}\omega^k=
+    \mbox d  B _{ij}-\sum_kB _{ik}\omega^k_j
+    -\sum_kB_{kj}\omega^\kappa _i;\tag1.15\\
+    &{\mbox d  }\omega^i_{j}  +  \sum_k\omega^i_{k}\wedge\omega^k_j
+ =\Omega^i_{j}=\frac{1}{2}\sum_{kl}
+ R^i_{\ jkl}\omega^k\wedge\omega^l. \tag1.16
+ \endalign
+ $$
+     结构方程的可积条件包括
+  $$
+  \align
+  &A_{ij  k}-A_{ik  j}= B_{ij}C _k-B_{ik}C_j;\tag1.17\\
+  &B_{ij k}-B_{ik j}=g_{ij}C_k-
+    g_{ik}C_j;\tag1.18\\
+ & C_{ij}-C _{j i}
+=\sum_k(B_{i}^{k}A_{kj}-B_{j}^{k}A_{ki});\tag1.19\\
+  &R_{ijkl}:=\sum_tg_{it}R^t_{\ jkl}\\
+  &\qquad\ =(B _{ik}B_{jl}-B _{il}B _{jk})+
+    (g_{ik}A_{jl}-g_{il}A_{jk})
+    +(A_{ik}g_{jl}-A_{il}g_{jk}).\tag1.20
+ \endalign
+ $$
+     由 (1.7)有
+  $$\Delta Y=-\sum_iA_i^iY-nN+
+\sum_iB_i^i\xi,$$
+   对比(1.2)和 (1.3)得到
+         $$\sum_iA_i^i=\frac{1}{2n}(
+n^2\kappa  +  1);\quad
+ \sum_iB_i^i=0.
+    \eqno{(1.21)}$$
+      在(1.18 )和(1.20)中取迹得到
+    $$
+    \align
+    &(1-n)C_i=\sum_{jk}B_{ijk} g^{jk};\tag1.22\\
+&R_{ij}=\sum_kA_{k}^{k} g_{ij} +(n-2)A_{ij}+\sum_{k }B_{i}^{k}
+B_{kj}.\tag1.23
+    \endalign
+    $$
+      在(1.23)中取迹, 并利用 (1.21), 有
+    $$\sum_{ij}B^i_jB^j_i
+  = \frac{n-1}{n}.
+\eqno{(1.24)}$$
+    由(1.22)和(1.23)我们知道一旦张量$\mathbb B$和曲率张量$R$确定,
+    则张量$\mathbb A$和$\phi$也随之确定,
+    而曲率张量$R$和联络形式$\{\omega_{i}^{j}\}$是由共形度量$g$确定的.
+    如果$\mathbf M$连通,
+    给予标架$\{Y,N,Y_i,\xi\}$一个初值,
+    偏微分方程系统(1.6), (1.7)决定了$\mathbf M$上的一个标架场
+    $\{Y,N,Y_i,\xi\}$. 从而有
+
+{\bf 定理 1.2} (Lorentz共形几何的基本定理)\quad 正则类时超曲面
+$x:\mathbf M \rightarrow \mathbb Q^{n+1}_1$和
+$\widetilde{x}:\widetilde{\mathbf M } \rightarrow \mathbb
+Q^{n+1}_1(n\geq3)$共形等价当且仅当存在微分同胚
+ $f:\mathbf M\rightarrow\widetilde {\mathbf M}$
+ 保持共形度量$g$和共形第二基本形式$\mathbb B$.
+
+ \Section{三种Lorentz空间形式中的类时超曲面}
+
+ 考察下列嵌入
+ $$
+  \align
+  &\sigma_0:\mathbb R^{n+1}_1
+  \rightarrow\mathbb Q^{n+1}_1,\ \ u\mapsto\b[\b(\frac{ \langle u,u\rangle - 1 }{2}
+  ,u,\frac{1+\langle u,u\rangle  }{2}\b)\b],\tag2.1\\
+  &\sigma_{+1}:\mathbb S^{n+1}_1
+  \rightarrow\mathbb Q^{n+1}_1,\ \ u\mapsto[(u,1)],\tag2.2\\
+  &\sigma_{-1}:\mathbb H^{n+1}_1
+  \rightarrow\mathbb Q^{n+1}_1,\ \ u\mapsto[(1,u)],\tag2.3
+ \endalign
+ $$
+ $\sigma_0,\sigma_{+1},\sigma_{-1}\!\!$为共形映射,
+ 我们在研究Lorentz共形几何时,
+ 可以把三种Lorentz空间形式看成共形空间$\mathbb Q^{n+1}_1\!$
+ 的子集. 于是, $\hbox{Lorentz空间形式中的类时超曲面自然也是共形空间
+ 中的类时超曲面.}$
+
+ 本节给出Lorentz空间形式中的正则类时超曲面的共形不变量和
+ Lorentz不变量之间的关系.
+ 当$\epsilon=0,+1,-1$时, 让$\mathbf L^{n+1}(\epsilon)$分别表示$\mathbb R^{n+1}_1,
+ \mathbb S^{n+1}_1,\mathbb H^{n+1}_1$.
+
+ 对正则类时超曲面$u:\mathbf M^n\rightarrow\mathbf L^{n+1}(\epsilon)
+ $, 令 $\{e_1, \ldots, e_{n}\}$是 $\mathbf M$的一个局部基, 并记$I_{ij }=I(e_i,e_j)$,
+ $\{e_1, \ldots, e_{n}\}$的对偶基为
+ $\{\omega^1,$ $\ldots, \omega^{n}\}$.
+    则我们有第一和第二基本形式 I, II以及平均曲率 $ H $,
+      记为
+      $${\rm I}=\langle \texttt du,\texttt du\rangle =\sum_{ij }I_{ij }\omega^i\otimes\omega^j;
+      \quad {\rm II}=\sum_{ij }h _{ij}\omega^i\otimes\omega^j ;\quad
+       H=\frac{1}{n} \sum_{ij }h_{ij }I^{ij },$$
+    其中$(I^{ij })=(I_{ij })^{-1}.$
+    另外记 $\Delta_I$和 $\kappa _I$是关于
+$I$的 Laplace算子和法化数量曲率, $h^i_j=\sum_kI^{ik}h_{kj}$.
+
+ {\bf 命题 2.1 }\quad 承上所设, 我们有
+  $x=\sigma_\epsilon\circ u:\mathbf M^n\rightarrow\mathbf L^{n+1}(\epsilon)
+  \subset\mathbb Q^{n+1}_1$的共形度量
+  $$g=
+  \frac{n}{n-1}
+ \b(  \sum_{ij}h_{i}^{j} h_j^{i}-nH^2  \b)
+ \langle \texttt du,\texttt du\rangle
+ :={\rm e}^{2\tau}I,
+\eqno{(2.4)}$$
+ 并且
+    $$
+    \align&   A_{ij}=
+  \tau_i\tau_j-\tau_{i, j}
+ - H h _{ij}  -   \frac{1}{2}
+ \b( \sum_{k}\tau_k\tau^k  +   H ^2   -   \epsilon  \b)
+ I_{ij},\tag2.5\\
+  &  B _{ij}=   {\rm e}^{\tau} ( h _{ij}-H  I_{ij}  )  ,\quad
+  {\rm e}^{\tau}C _i=   H \tau_i -H _{i} -\sum_{j}h _{ij}\tau^j
+  ,\tag2.6
+   \endalign
+   $$
+   其中$\tau_i=e_i(\tau), \, \tau^i=\sum_j I^{ij}\tau_j$,
+$\tau_{i, j}$是$\tau$关于$I$的 Hesse算子的分量,
+ $H _{ i}=e_i(H)$.
+
+ {\bf 证明 }\quad 不妨设正则类时超曲面$u:\mathbf M^n\rightarrow\mathbb
+ R^{n+1}_1$. 令 $e_{n+1} $是 $u$的单位法矢,
+$\langle e_{n+1},e_{n+1}\rangle =1$.
+   设 $u_i=e_i(u),e_{n+1}$是沿\ $\mathbf M$的局部基, 且
+  $${\rm d}u=\sum_i\omega^i u_i,\ \
+  {\rm d}u_i=\sum_j\omega_i^ju_j+\mathfrak   h_i
+ e_{n+1} ,\ \
+ {\rm d}e_{n+1}=-\sum_{i}\mathfrak   h^iu_i,$$
+ 其中$\mathfrak   h_i=
+ \sum_j h_{ij}\omega^j,\, \mathfrak   h^i=
+ \sum_j h^i_{j}\omega^j$. 记 $\Delta_I$和 $\kappa _I$是关于
+$I$的 Laplace算子和法化数量曲率, 则有
+    $$\Delta_I u=nHe_{n+1};\ \ \kappa _I=\frac{1}{n(n-1)}
+ \b (   n^2H^2 - \sum_{ij} h_{i}^{j} h_j^{i}\b). $$
+     对 $x=\sigma_0 \circ u:\mathbf M\rightarrow \mathbb Q^{n+1}_1$
+ 存在整体提升
+  $$y:\mathbf M\rightarrow C^{n+2}\subset\mathbb R^{n+3}_2,\ \
+y=\b( \frac{\langle u, u\rangle -1}{2},u, \frac{\langle u,
+u\rangle+1 }{2}\b), $$
+  于是
+     $$
+     \langle {\rm d}y, {\rm d}y\rangle =\langle {\rm d}u, {\rm d}u\rangle =I;\ \
+ \Delta=\Delta_I;\ \ \ \kappa =\kappa _I.
+     $$
+由上可得
+  $$\langle \Delta y, \Delta y\rangle -n^2\kappa
+ =\frac{n}{n-1}
+ \b(  \sum_{ij} h_{i}^{j} h_j^{i}  -  nH^2\b).  $$  因此 $x$的共形度量
+  $$g=  \frac{n}{n-1}
+ \b(  \sum_{ij} h_{i}^{j} h_j^{i}  -  nH^2\b)
+ \langle {\rm d}u,{\rm d}u\rangle  :={\rm e}^{2\tau}I.
+ $$
+
+ 记$$y_i:=e_i(y)=(\langle u, u_i\rangle,u_i,  \langle u, u_i\rangle ),\ \ \zeta_{n+1}= (\langle u, e_{n+1}\rangle ,e_{n+1},
+  \langle u, e_{n+1}\rangle ),\ \  p=(1,\mathbf 0,1),$$
+   易见
+  $  \{  y,y_i ,$ $\zeta_{n+1} , \mathfrak   p \}  $是$\mathbb R^{n+3}_2$中的一组基.
+  我们又有
+  $$y\perp y_i,\zeta_{n+1};\ \  \mathfrak   p\perp y_i,\zeta_{n+1};\ \
+   y_i \perp \zeta_{n+1} ;\ \  \langle \mathfrak   p,y\rangle = -1 ;\ \
+   \langle \mathfrak   p,   \mathfrak   p\rangle = 0 ; \ \langle y_i,y_j\rangle =I_{ij},
+ $$
+  由$\xi\bot  \hbox{span}\{Y,\triangle Y,Y_i\}  =  \hbox{span}\{y,\triangle_I y,y_i\}$,  可设
+ $$
+ \align
+ &Y={\rm e}^\tau y,\ \
+   Y_i=  e_i(Y)=  \tau_iy+y_i,\ \
+ \xi=  Hy+\zeta_{n+1},\\
+     &-{\rm e}^\tau N=
+       \frac{1}{2}\b(\sum_{k}\tau_k\tau^k+ H^2\b) y
+       +\sum_i\tau^i y_i
+       + H\zeta_{n+1}
+       +\mathfrak   p.
+       \endalign
+       $$
+ 关于超曲面$x$有如前定义的张量, 其中
+ $$
+ \psi_i=-\langle {\rm d}Y_i,N\rangle ,\ \
+ B_i=- \langle {\rm d}\xi,Y_i\rangle ,\ \
+ \phi=- \langle {\rm d}\xi,N\rangle
+ , $$
+ 而
+ $$
+ {\rm d}y=\sum_i\omega_iy_i,\ \
+ {\rm d}\zeta_{n+1}=\sum_{ij}h_{ij}\omega_jy_i
+ , \ \
+ {\rm d}y_i=\sum_j\omega_i^jy_j+
+ \mathfrak   h_i\zeta_{n+1}+
+ \omega_i\mathfrak   p, $$
+直接代入可得共形张量
+   $\mathbb A,\mathbb B, \mathbb C$的表达如公式(2.5), (2.6)所言.   $\mathbb
+ S^{n+1}_1$和$\mathbb
+ H^{n+1}_1$中的正则类时超曲面的公式亦可类似导出.
+
+ {\bf 定义 2.1}\quad 两张正则类时超曲面 $u,\tilde u:\mathbf M\rightarrow\mathbf L^{n+1}(\epsilon)$
+ 共形等价当且仅当$\mathbb Q^{n+1}_1$中的超曲面
+ $x=\sigma_\epsilon\circ u,\, \widetilde{x}=\sigma_\epsilon\circ
+ \widetilde{u}$共形等价.
+
+ 由 定理 1.2, 我们有:
+
+{\bf 定理 2.2 }\quad 两张正则类时超曲面 $u,\tilde u:\mathbf
+M\rightarrow\mathbf L^{n+1}(\epsilon)\
+(n\geq3)$共形等价当且仅当存在微分同胚 $f:\mathbf
+M\rightarrow\mathbf M$保持共形度量 $g$和共形第二基本形式 $\mathbb
+B$.
+
+{\bf 例子 2.1 }\quad
+ 对$0<a<1,\, b=\sqrt{1-a^2}$,
+ 扭积(warped product)嵌入
+ $$
+ \align
+ &u:\mathbb S^{p}(a)\times
+ \mathbb R^+\times\mathbb R^{n-p-q-1}\times
+ \mathbb S_1^{q}(b)\subset\mathbb R^{n+2}_1 \rightarrow
+ \mathbb R^{n+1}_1 ,\\
+ &
+  (u',t,u'',u''')\mapsto(tu',u'',tu''').
+  \endalign
+   $$
+ 嵌入$u$的第一基本形式为
+ $$
+ I=\langle\mbox d  u,\mbox d  u\rangle=
+ t^2\mbox d  u'\cdot\mbox d  u'+\mbox d  t\otimes\mbox d  t
+ +\mbox d  u''\cdot\mbox d  u''+
+ t^2\langle\mbox d  u''',\mbox d  u'''\rangle,$$
+ 嵌入$u$的单位类空法矢为
+ $$
+ e_{n+1}=\b(  -  \frac{b}{a}u',\mathbf 0, \frac{a}{b}u'''\b),$$
+ 嵌入$u$的第二基本形式为
+ $$
+ II  = -\langle\mbox d  u,\mbox d  e_{n+1}\rangle  =
+ t\b( \frac{b}{a}\mbox d  u'\cdot\mbox d  u'-\frac{a}{b}
+ \langle\mbox d  u''',\mbox d  u'''\rangle\b).$$
+ 设$I_k$表示$k$阶单位阵, $\mathbf{0}_k$表示$k$阶零方阵, 于是
+ $$
+ \align
+ &(h^i_{j})=\b(  \frac{b}{at}I_p  \b)\oplus
+ \mathbf{0}_{n-p-q}\oplus
+ \b( -  \frac{a}{bt}I_q  \b),\quad
+ H=\frac{  pb^2 -qa^2   }{nabt},\tag2.7\\
+ &
+ {\rm e}^{2\tau}=\frac{n}{n-1}
+ \b(  \sum_{ij} h_{i}^{j} h_j^{i}-nH^2  \b)  =  \frac{ q(n-q)a^4 +   2pqa^2b^2  + p(n-p)b^4   }
+ {(n-1) a^2b^2  }   \cdot\frac{1}{t^2}
+ :=\frac{c^2}{t^2}.\tag2.8
+ \endalign
+ $$
+ 假设, 对$(\mathbb S^{p}(a),\mbox d  u'\cdot\mbox d  u')$,
+ 其局部基为$\{e_1,\ldots,e_p\}$, 而$( \mathbb R^+\times\mathbb R^{n-p-q-1},
+\, \mbox d  t\otimes\mbox d  t
+ +\mbox d  u''\cdot\mbox d  u'')$的局部基为$\{e_{p+1}=\frac{\partial}{\partial t},\, e_{p+2}
+ ,\ldots,e_{n-q}\}$, $(  \mathbb S_1^{q}(b),\, \langle\mbox d  u''',\mbox d  u'''\rangle
+ )$的局部基为$\{e_{n-q+1} ,\ldots,e_{n }\}$.
+ 容易算出
+ $$\tau_{i}=0\ ( i\neq p+1)
+ ,\quad \tau_{p+1}=-\frac{1}{t } ;
+ \quad\tau_{p+1,p+1}=\frac{1}{t^2}.\eqno(2.9)$$
+在(2.8)中已有$$ c= \sqrt{  \frac{ q(n-q)a^4 +   2pqa^2b^2  +
+p(n-p)b^4   }
+ {(n-1) a^2b^2  }   }.$$ 将(2.9)代入(2.6),
+ 并由(2.7), 我们发现
+ $$
+ \align
+ &
+ C_i=0,\quad(B^i_{j})=(\lambda_1I_p)\oplus
+ (\lambda_2I_{n-p-q})\oplus
+ (\lambda_3I_q),\tag2.10\\
+  &
+  \lambda_1=\frac{qa^2+(n-p)b^2}{nabc}>0,\quad
+  \lambda_2=\frac{   qa^2  -  pb^2  }{nabc},\quad
+  \lambda_3=  - \frac{  (n-q)a^2  +  pb^2  }{nabc}<0
+  ,\tag2.11\\
+  &\lambda_1  > \lambda_2  >  \lambda_3.\tag2.12
+  \endalign
+  $$
+ 对超曲面
+ $$
+ x=\sigma_0\circ u:\mathbb S^{p}(a)\times
+ \mathbb R^+\times\mathbb R^{n-p-q-1}\times
+ \mathbb S_1^{q}(b)\rightarrow
+ \mathbb Q^{n+1}_1, $$
+  共形度量$g={\rm e}^{2\tau}I=g_1\oplus g_2\oplus g_3$, 其中
+ $$
+ g_1=c^2\mbox d  u'\cdot\mbox d  u',\quad
+ g_2=\frac{c^2}{t^2}(\mbox d  t\otimes\mbox d  t
+ +\mbox d  u''\cdot\mbox d  u''),\quad
+ g_3=c^2\langle\mbox d  u''',\mbox d  u'''\rangle.$$
+ 记
+ $$x(\mathbb S^{p}(a)\times
+ \mathbb R^+\times\mathbb R^{n-p-q-1}\times
+ \mathbb S_1^{q}(b))=WP(p,q,a),$$
+ 下节将看到$$(WP(p,q,a),g)=(\mathbb S^{p}(a),g_1)\times( \mathbb R^+\times\mathbb R^{n-p-q-1},
+g_2)\times(  \mathbb S_1^{q}(b),g_3
+ ),$$ 并且$(\mathbb S^{p}(a),g_1),( \mathbb R^+\times\mathbb R^{n-p-q-1},
+g_2),(  \mathbb S_1^{q}(b),g_3 )$都是常曲率流形.
+
+
+ \Section{分类定理的证明}
+
+{\HT 定义3.1}\quad 设 $x:\mathbf{M}^n\rightarrow \mathbb
+Q^{n+1}_1$为共形空间$\mathbb
+  Q^{n+1}_1$中的正则类时超曲面, 如果$B_{ijk}=0$, $i,j,k=1,\ldots,n$,
+  则称超曲面$x$的共形第二
+ 基本形式是平行的.
+
+下面设 $x:\mathbf{M}^n\rightarrow \mathbb
+Q^{n+1}_1$为共形空间$\mathbb
+  Q^{n+1}_1$中的具有平行共形第二
+ 基本形式的正则类时超曲面. 由(1.19)知
+ $$C_i=0,\quad i=1,\ldots,n.\eqno(3.1)$$
+ 连同(3.1)和(1.18), 如果记$\widetilde{A}=(A_{ij}),\, B=(B_{i}^{j})$,
+ 则矩阵$\widetilde{A},B$对合,
+ 即
+ $$[\widetilde{A},B]=0.\eqno(3.2)$$
+ 由文[15]的代数引理, 选择$x$关于$g$的局部基$\{e_1,\ldots,e_n\}$可使矩阵$B$规范化,
+ 即
+
+ {\HT 引理3.1}\quad 承上所设, 设$G=(g_{ij}),\, g_{ij}=g(e_i,e_j),$
+ 适当调整$x$的局部基$\{e_1,\ldots,e_n\}$, 有
+\vskip4pt
+ (I) \ $G=(-1)\oplus I_{n-1},\  B=\hbox{diag}(b_1,\ldots,b_n);$ 或者
+
+
+(II) \ $G=\left(\begin{array}{cc} -1  &  0 \\  0   &   1
+   \end{array}\right)\oplus I_{n-2}, \  B=\left(\begin{array}{cc}
+           b_1  &  b_2 \\  -b_2    &   b_1
+           \end{array}\right)  \oplus \,
+           \hbox{diag}(b_3,\ldots,b_n),\,
+           b_2\neq0;$ 或者
+
+
+(III) \ $G=\left(\begin{array}{cc} 0  &  1 \\  1    &   0
+               \end{array}\right)\oplus I_{n-2},\
+               B=\left(\begin{array}{cc} b_1  &  1 \\  0    & b_1
+                        \end{array}\right)
+                        \oplus \,  \hbox{diag}(b_3,\ldots,b_n);$ 或者
+
+
+(IV) \ $G=\left(\begin{array}{cc} 0  &  1 \\  1    &   0
+              \end{array}\right)
+              \oplus I_{n-2},\
+              B=\left(\begin{array}{ccc} b_1  &  0  &  1 \\  0 &
+                 b_1  &   0  \\  0  &  1  &  b_1
+                  \end{array}\right)
+                 \oplus   \hbox{diag}(b_4,\ldots,b_n).$
+
+我们把上述引理中的四种情况所对应的正则类时超曲面分别称为I, II, III,
+IV型超曲面.
+ 对I, III, IV三种情况, 我们再设$\{\lambda_1,\ldots,\lambda_\gamma\}$是矩阵$B$的互异的特征值,
+ $m_r$为$\lambda_r$的重数. 故由(1.24)
+ 和(1.21)的第二式
+ $$\sum_{r=1}^\gamma
+ m_r\lambda_r=0,\quad\sum_{r=1}^\gamma
+ m_r\lambda_r^2=\frac{n-1}{n}.\eqno(3.3)$$
+ 记$m_0=0$, 约定
+ $$1\leq r,s,p,q\leq\gamma,\quad1\leq i,j,k,l\leq n,\quad
+ \sum_{s=0}^{r-1}m_s+1\leq i_r,j_r\cdots\leq\sum_{s=0}^{r}m_s.
+ \eqno(3.4)$$
+ 由矩阵$\widetilde{A},B$对合, 所以$\widetilde{A}=\bigoplus_{r=1}^\gamma \widetilde{A}_r,$
+ 其中$\widetilde{A}_r$为$m_r$阶方阵. 为证明 分类定理, 我们先给出一些命题和引理.
+
+ {\HT 命题3.1}\quad 承上所设, 如果$x$是I型类时超曲面, 则
+ 矩阵$\widetilde{A}$必须满足$\widetilde{A}
+ =\bigoplus_{r=1}^\gamma
+ \mu_rI_{m_r}$, 并且对所有$r\in\{ 1,\ldots,\gamma  \}$,
+ $\lambda_r$与$\mu_r$都是常数.
+
+ {\HT 证明}\quad 对$\sum_kB_{ijk}\omega^k=
+    \mbox d  B _{ij}-\sum_kB _{ik}\omega_{j}^{k}
+    -\sum_kB_{kj}\omega_{i}^{k}$, 取$i=j=i_r$,
+    即有$\lambda_r=$常数, $\forall r$; 再取$r\neq s,\, i=i_r,\, j=j_s$, 则
+    $\omega_{i_r}^{j_s}=0$, $\mathbf M$是乘积流形, 即
+    $$(\mathbf M,g)=(\mathbf M_1,g_1)\times\cdots\times(\mathbf
+    M_\gamma,g_\gamma).\eqno(3.5)$$
+
+
+在(1.16)中取$r\neq s,\, i=i_r,\, j=j_s$, 则由${\mbox d
+}\omega^{i_r}_{j_s}+
+ \sum_k\omega^{i_r}_ {k}\wedge\omega^{k}_{j_s} =\Omega^{i_r}_{j_s}$及(3.5),
+ 我们有
+ $$\Omega^{i_r}_{j_s}=\frac{1}{2}\sum_{kl}R^{i_r}_{\ j_s kl }=0.\eqno(3.6)$$
+
+
+ 又由(1.20),
+ $$
+ \align
+ R_{i_rj_sk_rl_s}&=\sum_t g_{i_rt}R^t_{\ j_sk_rl_s}\\
+ &=(B _{i_rk_r}B_{i_sl_s}{-}B _{i_rl_s}B _{i_sk_r}){+}
+     (g_{i_rk_r}A_{i_sl_s}{-}g_{i_rl_s}A_{i_sk_r}){+}(A_{i_rk_r}g_{i_sl_s}{-}A_{i_rl_s}g_{i_sk_r})\\
+    &=0.\tag3.7
+    \endalign
+    $$
+
+
+ 在(3.7)中取$i_r\neq k_r,\, j_s=l_s$, 我们得到
+ $$A_{i_rk_r}=0,\quad \widetilde{A}= {\mbox { diag } }(a_1,\ldots,a_n).\eqno(3.8)$$
+
+
+再在(3.7)中取$i_r=k_r,\, j_s=l_s$,
+ $$a_{i_r}+a_{j_s}+\lambda_r\lambda_s=0,\quad r\neq s.\eqno(3.9)$$
+
+
+ 固定$s$, 在(3.9)中让$i_r$变动, 可知$\forall\, r,a_{i_r}$相等. 故可设$a_{i_r}=\mu_r,\ \forall\, r$,
+ 于是$$A=\bigoplus_{r=1}^\gamma \mu_rI_{m_r}.$$
+由(3.1)和(1.17), $A_{ijk}$关于下标全对称. 再考察(1.14), 取$r\neq
+s,\, i=i_r,\, j=j_s$, 则$A_{i_rj_sk}=0,\ \forall\, k$;
+在(1.14)中又取$i=j=i_r$, 则
+ $$\texttt{d}\mu_r=\sum_kA_{i_ri_r k}\omega^k=\sum_{j_r}A_{i_ri_r{j_r}}\omega^{j_r}.\eqno(3.10)$$
+ 对(3.9)做外微分, 并连同(3.10), 可知$\mu_r=$常数, $\forall\, r.$ 证毕.
+
+ {\HT 命题3.2}\quad 承上所设, 如果$x$是I型类时超曲面, 矩阵$ B$关于共形度量$g$的不同特征值的个数
+ $\gamma $只能等于2或者3.
+
+ {\HT 证明}\quad 显然, $\gamma=1$将导致(1.21)与(1.24)矛盾.
+ 如果$x$是I型类时超曲面, (3.9)现在成为
+ $$\mu_r+\mu_s+\lambda_r\lambda_s=0,\quad r\neq s.\eqno(3.11)$$
+ 如果设$p\neq r,s$, 又有
+ $$\mu_r+\mu_p+\lambda_r\lambda_p=0,\quad
+ \mu_s+\mu_p+\lambda_s\lambda_p=0.\eqno(3.12)$$
+ 可以解出
+ $$\mu_p=\frac{1}{2}[   -    (\lambda_r+\lambda_s)\lambda_p+
+ \lambda_r\lambda_s].\eqno(3.13)$$
+ 如果$\gamma\geq4$, 将有$q\neq r,s,p$,使
+ $$\mu_p=\frac{1}{2}[   -    (\lambda_r+\lambda_q)\lambda_p+
+ \lambda_r\lambda_q].\eqno(3.14)$$
+ 上面两式将导致$\lambda_s=\lambda_q,s\neq q$, 矛盾.证毕.
+
+下面约定$\mathbb{S}^k(a)$表示半径为$a $的球面,
+ $\mathbb{H}^k(a)$表示半径为$a $的双曲空间;
+ $\mathbb{S}_1^k(a)$表示半径为$a $的de Sitter球,
+ $\mathbb{H}_1^k(a)$表示半径为$a $的反de Sitter球.
+
+  {\HT 命题3.3}\quad 对于I型类时超曲面, 如果
+ $\gamma=2$, 则$x(\mathbf M)$与下面三种标准嵌入的类时超曲面之一的开子集
+ 共形等价:
+
+ (i) \ $\mathbb R_1^k\times\mathbb S^{n-k}
+    \subset\mathbb R^{n+1}_1$ 或  $\mathbb R^k\times\mathbb S_1^{n-k}
+    \subset\mathbb R^{n+1}_1$;
+
+ (ii) \ $\mathbb S_1^k(a)\times\mathbb S
+   ^{n-k}(      \sqrt{  1   -   a^2    } )
+    \subset\mathbb S^{n+1}_1$, 此时 $ 0  <  a  <  1   $;
+
+  (iii) \ $\mathbb S_1^k(a)\times\mathbb H
+   ^{n-k}(     \sqrt{  1   +   a^2    }  )
+    \subset\mathbb H^{n+1}_1$, 此时 $    a >0   $;
+ 或 $\mathbb H_1^k(a)\times\mathbb
+ S^{n-k}(     \sqrt{    a^2   -1 }   )
+ \subset\mathbb H^{n+1}_1 $, 此时
+
+ \qquad \ $ a>1$.
+
+ {\HT 证明}\quad 如果
+ $\gamma=2$, 不妨设
+$B=(\lambda_1I_k)\oplus(\lambda_2I_{n-k})$, 并且$k,n-k\geq2$.
+由(3.3)式
+$$\lambda_1=\frac{1}{n}\sqrt{\frac{(n-k)(n-1)}{k}},\quad
+  \lambda_2=-\frac{1}{n}\sqrt{\frac{k(n-1)}{n-k}}
+  .\eqno(3.15)$$
+ 在命题3.1中,
+  我们已经有$$(\mathbf M,g)=(\mathbf M_1,g_1)\times(\mathbf
+  M_2,g_2),$$
+  并且由(1.20)式, $(\mathbf M_1,g_1)$
+  与 $(\mathbf M_2,g_2)$都是常曲率为
+  $K_1$与 $K_2$的黎曼流形, 其中
+  $$ K_1=2\mu_1+\lambda_1^2
+    ,\quad K_2=2\mu_2+\lambda_2^2
+  .\eqno(3.16)$$
+ 加上(3.11)式,   故
+ $$K_1+K_2= (\lambda_1-\lambda_2)^2=  \frac{ n-1  }{  k ( n-k  )  } >  0.\eqno(3.17)$$
+
+ 当$K_1=0$或$K_2=0$时,
+ 则$x(\mathbf M)$与超曲面$\mathbb R_1^k\times\mathbb S^{n-k}
+    \subset\mathbb R^{n+1}_1$或  $\mathbb R^k\times\mathbb S_1^{n-k}
+    \subset\mathbb R^{n+1}_1$的开子集共形等价;
+
+    当$K_1 >0$时,
+ 则$x(\mathbf M)$与超曲面$\mathbb S_1^k(a)\times\mathbb S
+   ^{n-k}(       \sqrt{  1   -   a^2    } )
+    \subset\mathbb S^{n+1}_1$的开子集共形等价,
+     注意此时$0  <  a  <  1$;
+     或者$x(\mathbf M)$与超曲面$\mathbb S_1^k(a)\times\mathbb H
+   ^{n-k}(   \sqrt{  1   +   a^2    } )
+    \subset\mathbb H^{n+1}_1$的开子集共形等价,
+     注意此时$   a  >0   $;
+
+    当$K_1=  -\frac{1}{a^2}  <0$时,
+ 则$x(\mathbf M)$与超曲面$\mathbb H_1^k(a)\times\mathbb
+ S^{n-k}(   \sqrt{    a^2   -1 } )
+ \subset\mathbb H^{n+1}_1 $的开子集共形等价,  注意此时$   a  > 1   $. 证毕.
+
+ {\HT 命题3.4}\quad 对于I型类时超曲面, 如果
+ $\gamma=3$,  则$x(\mathbf M)$与$WP(p,q,a)$的开子集
+ 共形等价.
+
+ {\HT 证明}\quad 如果
+ $\gamma=3$, 不妨设
+$B=(\lambda_1I_{m_1})\oplus(\lambda_2I_{m_2})\oplus(\lambda_3I_{m_3})$,
+$\lambda_1> \lambda_2> \lambda_3$, 并且$\lambda_1>0$, $
+\lambda_3<0 $.
+ 由上面命题
+  我们有$$(\mathbf M,g)=(\mathbf M_1,g_1)\times(\mathbf M_2,g_2)\times(\mathbf
+  M_3,g_3),$$
+  并且由(1.20)式, $(\mathbf M_1,g_1)$, $(\mathbf M_2,g_2)$与$(\mathbf M_3,g_3)$都是常曲率为
+  $K_1$, $K_2$, $K_3$的黎曼流形. 集中若干有用式子
+  $$
+  \align
+  &m_1\lambda_1+m_2\lambda_2+m_3\lambda_3=0,\\
+  &m_1\lambda_1^2+m_2\lambda_2^2+m_3\lambda_3^2= \frac{n-1  }{n},\tag3.18\\
+ &\mu_1=\frac{1}{2}[-(\lambda_2+\lambda_3)\lambda_1  +
+ \lambda_2\lambda_3],\\
+ &\mu_2=\frac{1}{2}[-(\lambda_1+\lambda_3)\lambda_2  +
+ \lambda_1\lambda_3],\tag3.19\\
+ &\mu_3=\frac{1}{2}[-(\lambda_1+\lambda_2)\lambda_3  +  \lambda_1\lambda_2],
+ \endalign
+ $$
+ 由(3.18)式,  则
+ $$K_1=2\mu_1+\lambda_1^2=
+ (\lambda_1  -  \lambda_2) (\lambda_1  -  \lambda_3)>0,
+ \eqno(3.20)$$
+$$K_2=2\mu_2+\lambda_2^2=
+(\lambda_2  -  \lambda_1) (\lambda_2  -  \lambda_3)<0,
+ \eqno(3.21)$$
+$$K_3=2\mu_3+\lambda_3^2=
+ (\lambda_3  -  \lambda_1) (\lambda_3  -  \lambda_2)>0.
+ \eqno(3.22)$$
+  令$m_1=p,m_3=q$, 以$\lambda_2$为参数,
+ 给定$\lambda_2$后, 令$a=\cos \theta,\ b = \sin \theta,\
+ t=\tan \theta$, 代入(2.11)式,我们有
+ $$pt^2  +  nc\lambda_2 t  - q = 0.\eqno(3.23)$$
+ 由(3.23)容易解出唯一正数$a$. 对此正数$a$, 我们发现$WP(p,q,a)$
+  与超曲面$x(\mathbf M)$有相同的共形度量和共形第二基本形式.
+ 由定理2.2我们有命题3.4的结果. 证毕.
+
+综合命题3.3, 命题3.4, 我们得到本文开头的分类定理.
+
+
+\Thanks{作者们对审稿人表示衷心感谢.
+本文得到王长平教授、胡泽军教授的悉心指导, 在此一并表示衷心感谢.}
+
+\BeginRef
+
+\REF{[1]} Li H., Liu H., Wang C. P., Zhao G. S.,  M\"obius
+isoparametric Hypersurfaces in $\mathbb S^{n+1}$   with two
+distinct principal curvatures,  {\it Acta Mathematica Sinica,
+English Series},  2002, {\bf18}(3): 437--446.
+
+\REF{[2]} Hu Z., Li H., Classification of Hypersurfaces with
+parallel m\"obius second fundamental form in $\mathbb S^{n+1}$,
+{\it Sci. China  Ser. A}, 2004, {\bf 47}: 417--430.
+
+  \REF{[3]}Hu Z., Li D., M\"obius isoparametric Hypersurfaces
+   with three distinct principal curvatures,
+ {\it Pacific J. Math.}, 2007, {\bf232}(2):  289--311.
+
+
+  \REF{[4]} Hu Z., Li H., Wang C. P.,  Classification of
+  m\"obius isoparametric Hypersurfaces in $\mathbb S^{5}$,
+  {\it Monatsh. Math.}, 2007, { \bf151}(3):   201--222.
+
+ \REF{[5]} Hu Z., Zhai S., Classification of m\"obius isoparametric
+Hypersurfaces in the unit six-sphere, {\it Tohoku Math. J.}, 2008,
+{\bf 60}: 499--526.
+
+\REF{[6]}  Nie C. X.,  Wu C. X.,
+ Space-like Hypersurfaces with parallel conformal second fundamental
+ forms in the conformal space,
+  {\it Acta Mathematica Sinica, Chinese Series},  2008,
+  {\bf 51}(4): 685--692.
+
+ \REF{[7]} Nie C. X., Li T. Z., He Y. J., Wu C. X., Conformal
+ isoparametric Hypersurfaces with two
+distinct conformal principal curvatures in conformal space,
+ {\it Sci. China Ser. A},  2010, {\bf 53}(4): 953--965.
+
+\REF{[8]}  Wang C. P., Moebius geometry of submanifolds in
+$\mathbb S^n$, {\it   Manuscripta Math.}, 1998, {\bf 96}:
+517--535.
+
+ \REF{[9]} Liu H. L., Wang C. P., Zhao G. S., M\"obius isotropic submanifolds in $\mathbb S^n$,
+  {\it Tohoku Math. J.}, 2001, {\bf 53}: 553--569.
+
+\parindent=6mm
+ \REF{[10]}  Guo Z., The conformal gauss maps of willmore submanifolds,
+ {\it Acta Mathematica Sinica, Chinese Series}, 2003, {\bf 46}(1): 183--188.
+
+ \REF{[11]} Li H.,  Wang C. P.,  Surfaces with vanishing
+moebius form in $\mathbb S^n$,  {\it Acta Mathematica Sinica,
+English Series}, 2003, {\bf 19}(4): 671--678.
+
+\REF{[12]}  Shu S. C., Liu S. Y., Submanifolds with moebius flat
+normal bundle in $\mathbb S^{n}$,  {\it Acta Mathematica Sinica,
+Chinese Series}, 2005, {\bf 48}(6): 1221--1232.
+
+\REF{[13]}  Zhang T. F., Zhong D. X., Surfaces with vanishing
+ moebius form in $\mathbb S^{n }$,  {\it Acta Mathematica Sinica, Chinese Series},  2004,
+ {\bf 47}(2): 241--250.
+
+ \REF{[14]} Li X. X., Zhang F. Y., A classification of immersed
+  Hypersurfaces in spheres with parallel blaschke tensors,
+  {\it Tohoku Math. J.}, 2006, {\bf 58} (4): 581--597.
+
+\REF{[15]} Wang C. P.,  Canonical equiaffine Hypersurfaces in
+$\mathbb R^{n+1}$,
+  {\it    Math.  Z.}, 1993, {\bf 214}:  579--592.
+
+\EndRef
+
+\end{document}
