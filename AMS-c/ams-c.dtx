@@ -32,7 +32,7 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 %
-% \CheckSum{419}
+% \CheckSum{468}
 %
 % \iffalse meta-comment
 %
@@ -42,7 +42,7 @@
 %
 %<cls>\NeedsTeXFormat{LaTeX2e}[1995/12/01]
 %<art>\ProvidesClass{amsc}
-  [2011/06/26 v0.1 Acta Mathematica Sinica Chinese
+  [2011/06/28 v0.1a Acta Mathematica Sinica Chinese
 %<art>   article document class]
 %
 %<*driver>
@@ -175,7 +175,7 @@
 %<*art>
 \RequirePackage{graphicx,subfigure,picins}
 \RequirePackage{amsmath,amsthm,amssymb,amsfonts,amscd,mathrsfs}
-\RequirePackage{headrule,vatola}
+\RequirePackage{vatola}
 \RequirePackage{ifpdf}
 \input scrload.tex
 %</art>
@@ -192,6 +192,7 @@
 \oddsidemargin 0pt
 \evensidemargin 0pt
 \headsep 0.4 true cm
+\headheight 8 true mm
 \footskip 2mm
 \parindent 2\ccwd
 \renewcommand\baselinestretch{1.1}
@@ -265,17 +266,30 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
 %
 % \subsection{页眉页脚}
 %
+% \changes{v0.1a}{2011/06/28}{修改页眉上的页码字号}
 % 普通页页眉页脚
 %    \begin{macrocode}
 %<*art>
-\AtBeginDocument{
-\def\evenhead{%
-  \hfill {\zihao{-5}\songti 数\quad 学\quad 学\quad 报\quad\kaishu 中\ 文\ 版}
-  \hfill {\small \ams@volume}{\zihao{-5}\songti 卷}}
-\def\oddhead{%
-  {\small \ams@number}{\zihao{-5}\songti 期}\hfill
-  {\small \zihao{-5}\songti \ams@titlemark}\hfill}
+\def\ps@headings{%
+  \let\@oddfoot\@empty\let\@evenfoot\@empty
+  \def\@evenhead{%
+    \pushziti\vbox{\hbox to\textwidth{\rlap{\small\thepage}
+    \hfill {\zihao{-5}\songti 数\quad 学\quad 学\quad 报\quad\kaishu 中\ 文\ 版}
+    \hfill {\small\ams@volume}{\zihao{-5}\songti 卷}
+    \llap{}}\protect\vspace{2truemm}\relax
+    \hrule depth0pt height0.15truemm width\textwidth}\popziti}
+  \def\@oddhead{%
+    \pushziti\vbox{\hbox to\textwidth{\rlap{}
+    {\small\ams@number}{\zihao{-5}\songti 期}\hfill
+    {\small\zihao{-5}\songti \ams@titlemark}\hfill
+    \llap{\small\thepage}}
+    \protect\vspace{2truemm}\relax
+    \hrule depth0pt height0.15truemm width\textwidth}\popziti}
+  \let\@mkboth\@gobbletwo
+  \let\sectionmark\@gobble
+  \let\subsectionmark\@gobble
 }
+\ps@headings
 \newcommand*\TitleMark[1]{\def\ams@titlemark{#1}}
 %</art>
 %    \end{macrocode}
@@ -346,10 +360,11 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
 %</art>
 %    \end{macrocode}
 %
+% \changes{v0.1a}{2011/06/28}{将TitleHeader改为BeingTitle和EndTitle}
 % 标题页
 %    \begin{macrocode}
 %<*art>
-\def\TitleHeader{%
+\newcommand*\BeginTitle{%
   \vspace*{-13mm}%
   \thispagestyle{empty}%
   \noindent \hbox to \textwidth{\small{\zihao{-5}\songti 第}%
@@ -367,6 +382,7 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
   \ziju{0.025} \noindent {\small\HT 文章编号:}\ \ams@paperid%
   \qquad\qquad{\small\HT文献标识码:\ \ams@documentcode}%
 }
+\newcommand*\EndTitle{\vskip .1in}
 %</art>
 %    \end{macrocode}
 %
