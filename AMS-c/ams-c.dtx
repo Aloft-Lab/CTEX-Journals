@@ -32,7 +32,7 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 %
-% \CheckSum{468}
+% \CheckSum{511}
 %
 % \iffalse meta-comment
 %
@@ -42,7 +42,7 @@
 %
 %<cls>\NeedsTeXFormat{LaTeX2e}[1995/12/01]
 %<art>\ProvidesClass{amsc}
-  [2011/06/28 v0.1a Acta Mathematica Sinica Chinese
+  [2011/06/30 v0.1b Acta Mathematica Sinica Chinese
 %<art>   article document class]
 %
 %<*driver>
@@ -170,13 +170,14 @@
 %
 % \subsection{外围宏包}
 %
+% \changes{v0.1b}{2011/06/30}{去掉vatola宏包，加上natbib宏包}
 % amsc~文档类缺省使用的宏包
 %    \begin{macrocode}
 %<*art>
-\RequirePackage{graphicx,subfigure,picins}
-\RequirePackage{amsmath,amsthm,amssymb,amsfonts,amscd,mathrsfs}
-\RequirePackage{vatola}
 \RequirePackage{ifpdf}
+\RequirePackage{graphicx,subfigure,picins}
+\RequirePackage{amsmath,amsthm,amssymb,amsfonts,amscd,mathrsfs,bm}
+\RequirePackage[numbers,sort&compress]{natbib}
 \input scrload.tex
 %</art>
 %    \end{macrocode}
@@ -184,6 +185,7 @@
 %
 % \subsection{页面参数}
 %
+% \changes{v0.1b}{2011/06/30}{加上公式分页参数}
 %    \begin{macrocode}
 %<*art>
 \textheight 20.7 true cm
@@ -196,7 +198,7 @@
 \footskip 2mm
 \parindent 2\ccwd
 \renewcommand\baselinestretch{1.1}
-\AtBeginDocument{\TagsOnRight}
+\allowdisplaybreaks[4]
 %</art>
 %    \end{macrocode}
 %
@@ -389,7 +391,7 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
 %
 % \subsection{摘要和关键词}
 %
-% 摘要和关键词
+% 摘要
 %    \begin{macrocode}
 %<*art>
 \newcommand*\Abstract[1]{%
@@ -400,11 +402,47 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
   \begingroup\vskip.1in\narrower\noindent
     {\heiti\bf Abstract}\rm\quad #1%
   \par\vskip.1in\endgroup}
+%</art>
+%    \end{macrocode}
+%
+% 关键词
+%    \begin{macrocode}
+%<*art>
 \newcommand*\Keywords[2][关键词]{%
   \begingroup\narrower\noindent
     {\heiti\bf #1}\fangsong\quad #2%
   \par\endgroup}
 \newcommand*\EKeywords[2][Keywords]{%
+  \begingroup\narrower\noindent
+    {\heiti\bf #1}\rm\quad #2%
+  \par\endgroup}
+%</art>
+%    \end{macrocode}
+%
+% \changes{v0.1b}{2011/06/30}{加上MR主题分类命令}
+% MR主题分类
+%    \begin{macrocode}
+%<*art>
+\newcommand*\MRClassification[2][MR(2010)主题分类]{%
+  \begingroup\narrower\noindent
+    {\heiti\bf #1}\fangsong\quad #2%
+  \par\endgroup}
+\newcommand*\EMRClassification[2][MR(2010) Subject Classification]{%
+  \begingroup\narrower\noindent
+    {\heiti\bf #1}\rm\quad #2%
+  \par\endgroup}
+%</art>
+%    \end{macrocode}
+%
+% \changes{v0.1b}{2011/06/30}{加上中图分类命令}
+% 中图分类
+%    \begin{macrocode}
+%<*art>
+\newcommand*\ChineseClassification[2][中图分类]{%
+  \begingroup\narrower\noindent
+    {\heiti\bf #1}\fangsong\quad #2%
+  \par\endgroup}
+\newcommand*\EChineseClassification[2][Chinese Library Classification]{%
   \begingroup\narrower\noindent
     {\heiti\bf #1}\rm\quad #2%
   \par\endgroup}
@@ -445,17 +483,14 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
 %
 % \subsection{参考文献}
 %
+% \changes{v0.1b}{2011/06/30}{使用标准参考文献环境}
+% \changes{v0.1b}{2011/06/30}{增加supercite命令}
 %    \begin{macrocode}
 %<*art>
-\newcommand\BeginRef{%
-  \vspace*{.2in}
-  \centerline{\bf\heiti\zihao{-4}参\qquad考\qquad文\qquad献}
-  \vspace*{.2in}
-  \begingroup
-  \baselineskip 11pt
-  \footnotesize
-  \parindent=4.75mm}
-\newcommand\EndRef{\endgroup}
+\renewcommand\refname{\bf\heiti\zihao{-4}参\qquad考\qquad文\qquad献}
+\newcommand\BeginRef{\begin{thebibliography}{99}}
+\newcommand\EndRef{\end{thebibliography}}
+\newcommand*\supercite[1]{\textsuperscript{\cite{#1}}}
 %</art>
 %    \end{macrocode}
 %
