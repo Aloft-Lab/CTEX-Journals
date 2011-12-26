@@ -50,7 +50,7 @@
 %%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{amsc}
-  [2011/06/30 v0.1b Acta Mathematica Sinica Chinese
+  [2011/07/05 v0.1c Acta Mathematica Sinica Chinese
    article document class]
 \newif\ifams@evenend \ams@evenendfalse
 \DeclareOption{evenend}{\ams@evenendtrue}
@@ -141,8 +141,8 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
 \newcommand*\DocumentCode[1]{%
   \def\ams@documentcode{#1}}
 \newcommand*\ams@shortmonthname[1]{%
-\ifcase#1\or Jan\or Feb\or Mar\or Apr\or May\or Jun%
-\or Jul\or Aug\or Sept\or Oct\or Nov\or Dec\fi}
+\ifcase#1\or Jan.\or Feb.\or Mar.\or Apr.\or May\or Jun.%
+\or Jul.\or Aug.\or Sep.\or Oct.\or Nov.\or Dec.\fi}
 \newcommand*\Title[1]{%
   \vspace*{.2in}
   \begin{center}
@@ -174,12 +174,12 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
   \,\ams@volume{\zihao{-5}\songti 卷 第}%
   \,\ams@number{\zihao{-5}\songti 期}%
   \hfill{\zihao{-4} 数\quad 学\quad学\quad报\quad {\kaishu 中\ 文\ 版}}%
-  \hfill Vol.\ams@volume, No.\ams@number} \vskip -0.2mm%
+  \hfill Vol.\ams@volume, No.\ams@number} \vskip -0.3mm%
   \par\noindent%
   \hbox to \textwidth{\small\ams@year{\zihao{-5}\songti年}%
   \,\ams@month{\zihao{-5}\songti 月}%
   \hfill ACTA MATHEMATICA SINICA, Chinese Series%
-  \hfill \ams@shortmonthname{\ams@month}., \ams@year} \vskip -0.3mm %
+  \hfill \ams@shortmonthname{\ams@month}, \ams@year} \vskip -0.3mm %
   \par\noindent %
   \rule[2mm]{\textwidth}{0.5pt}\hspace*{-\textwidth}\rule[1.5mm]{\textwidth}{0.5pt}%
   \ziju{0.025} \noindent {\small\HT 文章编号:}\ \ams@paperid%
@@ -232,8 +232,8 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
 }
 \newcommand*\Thanks[1]{%
   \vskip8pt{\HT 致谢}\hspace{0.25cm} #1\par}
-\renewcommand\refname{\bf\heiti\zihao{-4}参\qquad考\qquad文\qquad献}
-\newcommand\BeginRef{\begin{thebibliography}{99}}
+\renewcommand\refname{\bf\heiti\zihao{-4}参\hspace{8mm}考\hspace{8mm}文\hspace{8mm}献\vspace*{2mm}}
+\newcommand\BeginRef{\vspace*{2mm}\baselineskip 11pt \footnotesize \parindent=4.75mm\begin{thebibliography}{99}}
 \newcommand\EndRef{\end{thebibliography}}
 \newcommand*\REF[1]{\bibitem{#1}}
 \newcommand*\supercite[1]{\textsuperscript{\cite{#1}}}
