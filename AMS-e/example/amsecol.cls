@@ -8,7 +8,7 @@
 %% 
 %% This is a generated file.
 %% 
-%% Copyright 2009-2010
+%% Copyright 2009-2011
 %% CTEX.ORG and any individual authors listed elsewhere in this file.
 %% 
 %% This file was generated from file(s) of the ams-e package project.
@@ -50,7 +50,7 @@
 %%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{amsecol}
-  [2010/06/12 v0.1c Acta Mathematica Sinica
+  [2011/12/26 v0.2 Acta Mathematica Sinica
    collection document class]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \PassOptionsToClass{10pt,oneside,notitlepage}{book}
@@ -137,6 +137,18 @@
   \endgroup
   \addcontentsline{toc}{title}{\@title}%
   \addcontentsline{toc}{author}{\protect\numberline{}\@author}%
+  \ifams@reviewer
+    \thispagestyle{plain}\newpage
+    \begingroup
+      \def\thanks##1{}
+      \def\footnote##1{}
+      \noindent
+      \raisebox{-22\p@}[0\p@][52\p@]{\parbox[t]{\textwidth}{\ams@pubinfo}}%
+      \begin{center}\bfseries\large%
+         \@title%
+      \par\end{center}%
+    \endgroup
+  \fi
   \global\let\@title\@empty
   \global\let\@author\@empty
 }

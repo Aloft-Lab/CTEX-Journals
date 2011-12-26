@@ -1,6 +1,6 @@
 % \iffalse meta-comment
 %
-% Copyright 2009-2010
+% Copyright 2009-2011
 % CTEX.ORG and any individual authors listed elsewhere in this file.
 %
 % This file is part of the ams-e package project.
@@ -32,7 +32,7 @@
 %%   Right brace   \}     Tilde         \~}
 %%
 %
-% \CheckSum{582}
+% \CheckSum{613}
 %
 % \iffalse meta-comment
 %
@@ -43,7 +43,7 @@
 %<cls>\NeedsTeXFormat{LaTeX2e}[1995/12/01]
 %<art>\ProvidesClass{amse}
 %<col>\ProvidesClass{amsecol}
-  [2010/06/12 v0.1c Acta Mathematica Sinica
+  [2011/12/26 v0.2 Acta Mathematica Sinica
 %<art>   article document class]
 %<col>   collection document class]
 %
@@ -75,6 +75,8 @@
 % \changes{v0.0}{2009/03/19}{Initial version}
 % \changes{v0.1}{2009/03/19}{First release of amse.cls file}
 % \changes{v0.1}{2009/03/19}{First release of amsecol.cls file}
+% \changes{v0.1c}{2010/06/12}{Minor revisions of format}
+% \changes{v0.2}{2011/12/26}{Add reviewer and publisher mode}
 %
 %
 % \DoNotIndex{\begin,\end,\begingroup,\endgroup}
@@ -153,6 +155,9 @@
 %<*art>
 \newif\ifams@evenend \ams@evenendfalse
 \DeclareOption{evenend}{\ams@evenendtrue}
+\newif\ifams@reviewer \ams@reviewertrue
+\DeclareOption{reviewer}{\ams@reviewertrue}
+\DeclareOption{publisher}{\ams@reviewerfalse}
 %</art>
 %    \end{macrocode}
 %
@@ -416,6 +421,18 @@ Http://www.ActaMath.com} \hfill
   \addcontentsline{toc}{author}{\protect\numberline{}\@author}%
 %</col>
 %<art>
+  \ifams@reviewer
+    \thispagestyle{plain}\newpage
+    \begingroup
+      \def\thanks##1{}
+      \def\footnote##1{}
+      \noindent
+      \raisebox{-22\p@}[0\p@][52\p@]{\parbox[t]{\textwidth}{\ams@pubinfo}}%
+      \begin{center}\bfseries\large%
+         \@title%
+      \par\end{center}%
+    \endgroup
+  \fi
   \global\let\@title\@empty
   \global\let\@author\@empty
 }
