@@ -50,10 +50,13 @@
 %%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{amsc}
-  [2011/07/05 v0.1c Acta Mathematica Sinica Chinese
+  [2011/12/26 v0.2 Acta Mathematica Sinica Chinese
    article document class]
 \newif\ifams@evenend \ams@evenendfalse
 \DeclareOption{evenend}{\ams@evenendtrue}
+\newif\ifams@reviewer \ams@reviewertrue
+\DeclareOption{reviewer}{\ams@reviewertrue}
+\DeclareOption{publisher}{\ams@reviewerfalse}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{cctart}}
 \PassOptionsToClass{twoside}{cctart}
 \ProcessOptions
@@ -148,12 +151,14 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
   \begin{center}
     {\huge\bf\zihao{2}\heiti #1}\\[.2in]
   \end{center}
+  \def\ams@title{#1}
 }
 \newcommand*\ETitle[1]{%
   \vskip.2in
   \begin{center}
     {\tenbf #1}\\[.2in]
   \end{center}
+  \def\ams@etitle{#1}
 }
 \newcommand*\Author[2]{%
   \begin{center}
@@ -185,7 +190,17 @@ scaled \magstep0 \font\tenbf=cmb10 scaled \magstep0
   \ziju{0.025} \noindent {\small\HT 文章编号:}\ \ams@paperid%
   \qquad\qquad{\small\HT文献标识码:\ \ams@documentcode}%
 }
-\newcommand*\EndTitle{\vskip .1in}
+\newcommand*\EndTitle{%
+  \vskip .1in
+  \ifams@reviewer
+    \newpage
+    \BeginTitle
+    \Title{\ams@title}
+    \ETitle{\ams@etitle}
+    \vskip .1in
+    \def\ams@titlemark{}
+  \fi
+}
 \newcommand*\Abstract[1]{%
   \begingroup\vskip.1in\narrower\noindent
     {\heiti\bf 摘\quad 要}\fangsong\quad #1%
