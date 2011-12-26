@@ -143,7 +143,7 @@
 Published online: \ams@onlinetime\\
 DOI: \ams@doi\\
 Http://www.ActaMath.com} \hfill
-\parbox[t]{6truecm}{\vskip -1.7cm \hfill}} %\includegraphics{actmark.eps}
+\parbox[t]{6truecm}{\vskip -1.7cm \hfill %\includegraphics{actmark.eps}
 }}
 \AtEndDocument{\label{lastpage}}
 \gdef\@author{}
