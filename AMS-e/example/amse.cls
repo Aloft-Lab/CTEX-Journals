@@ -8,7 +8,7 @@
 %% 
 %% This is a generated file.
 %% 
-%% Copyright 2009
+%% Copyright 2009-2010
 %% CTEX.ORG and any individual authors listed elsewhere in this file.
 %% 
 %% This file was generated from file(s) of the ams-e package project.
@@ -50,7 +50,7 @@
 %%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{amse}
-  [2009/05/12 v0.1b Acta Mathematica Sinica
+  [2010/06/12 v0.1c Acta Mathematica Sinica
    article document class]
 \newif\ifams@evenend \ams@evenendfalse
 \DeclareOption{evenend}{\ams@evenendtrue}
@@ -63,7 +63,7 @@
 \def\ams@beginENV{%
   \openin\@firstpage=firstpage.dat
   \ifeof\@firstpage
-    \setcounter{page}{1}
+    %\setcounter{page}{1}
   \else
     \global\read\@firstpage to\@fpage
     \setcounter{page}{\@fpage}
@@ -89,12 +89,12 @@
   \gdef\ams@setENV{}}
 \AtBeginDocument{\ams@setENV}
 \RequirePackage{graphicx,subfigure,picins}
-\RequirePackage{amsmath,amsthm,amssymb,amsfonts,amscd,mathrsfs}
+\RequirePackage{amsmath,amsthm,amssymb,amsfonts,amscd,mathrsfs,bm,enumerate}
 \RequirePackage[numbers,square,comma,sort&compress]{natbib}
 \RequirePackage{ifpdf,fancyhdr}
 \textheight      214mm%
 \textwidth       145mm%
-\topmargin       7.1mm%
+\topmargin       27.1mm%
 \oddsidemargin   -20pt%
 \evensidemargin  -20pt%
  %\headheight       15pt%
@@ -143,7 +143,8 @@
 Published online: \ams@onlinetime\\
 DOI: \ams@doi\\
 Http://www.ActaMath.com} \hfill
-\parbox[t]{6truecm}{\vskip -1.7cm \hfill\includegraphics{actmark.eps}}}
+\parbox[t]{6truecm}{\vskip -1.7cm \hfill}} %\includegraphics{actmark.eps}
+}}
 \AtEndDocument{\label{lastpage}}
 \gdef\@author{}
 \renewcommand*\author[2]{%
@@ -244,8 +245,8 @@ Http://www.ActaMath.com} \hfill
 \dbltextfloatsep \baselineskip
 \dblfloatsep \baselineskip
 \newtheoremstyle{plain}% name
-  {}%      Space above, empty = `usual value'
-  {}%      Space below
+  {2.5pt}%      Space above, empty = `usual value'
+  {2.5pt}%      Space below
   {\itshape}% Body font
   {}%         Indent amount (empty = no indent, \parindent = para indent)
   {\bfseries}% Thm head font
@@ -253,8 +254,8 @@ Http://www.ActaMath.com} \hfill
   {1em}% Space after thm head: \newline = linebreak
   {\thmname{#1}\thmnumber{ #2}\thmnote{ {\rm (#3)}}}%         Thm head spec
 \newtheoremstyle{definition}% name
-  {}%      Space above, empty = `usual value'
-  {}%      Space below
+  {2.5pt}%      Space above, empty = `usual value'
+  {2.5pt}%      Space below
   {}% Body font
   {}%         Indent amount (empty = no indent, \parindent = para indent)
   {\bfseries}% Thm head font
@@ -262,19 +263,22 @@ Http://www.ActaMath.com} \hfill
   {1em}% Space after thm head: \newline = linebreak
   {\thmname{#1}\thmnumber{ #2}\thmnote{ {\rm (#3)}}}%         Thm head spec
 \theoremstyle{plain}
-  \newtheorem{algo}{Algorithm}
-  \newtheorem{thm}{Theorem}
-  \newtheorem{lem}[thm]{Lemma}
-  \newtheorem{prop}[thm]{Proposition}
-  \newtheorem{cor}[thm]{Corollary}
+  \newtheorem{theorem}{Theorem}[section]
+  \newtheorem{lemma}[theorem]{Lemma}
+  \newtheorem{corollary}[theorem]{Corollary}
+  \newtheorem{definition}[theorem]{Definition}
+  \newtheorem{proposition}[theorem]{Proposition}
+  \newtheorem{conjecture}[theorem]{Conjecture}
+  \newtheorem{algorithm}[theorem]{Algorithm}
 \theoremstyle{definition}
-  \newtheorem{defn}{Definition}
-  \newtheorem{conj}{Conjecture}
-  \newtheorem{exmp}{Example}
-  \newtheorem{rem}{Remark}
+  \newtheorem{remark}[theorem]{Remark}
+  \newtheorem{problem}[theorem]{Problem}
+  \newtheorem{example}[theorem]{Example}
+  \newtheorem{question}[theorem]{Question}
+  \newtheorem{hypothesis}{Hypothesis}
   \newtheorem{case}{Case}
-\newcommand*\acknowledgement[1]{%
-  \noindent{\small\bf Acknowledgement\quad #1}%
+\newcommand*\acknowledgements[1]{%
+  \vspace{1mm}\noindent{\bf Acknowledgements\quad #1}%
   \par\vspace*{1mm}}
 \newcommand\BeginRef[1][99]{\begin{thebibliography}{#1}}
 \newcommand\EndRef{\end{thebibliography}}
@@ -283,8 +287,8 @@ Http://www.ActaMath.com} \hfill
 \renewcommand\bibsection{%
   \newcommand\ams@bibsection{\@startsection {section}{1}{\z@}%
                  {-3.5ex \@plus -1ex \@minus -.2ex}%
-                 {1.3ex \@plus.2ex}%
-                 {\normalfont\small\bfseries}}
+                 {0.3ex \@plus.2ex}%
+                 {\normalfont\bfseries}}
   \ams@bibsection*{\refname}
   \let\ams@bibsection\relax}
 \def\bibfont{\footnotesize}

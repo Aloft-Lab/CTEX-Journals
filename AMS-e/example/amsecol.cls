@@ -8,7 +8,7 @@
 %% 
 %% This is a generated file.
 %% 
-%% Copyright 2009
+%% Copyright 2009-2010
 %% CTEX.ORG and any individual authors listed elsewhere in this file.
 %% 
 %% This file was generated from file(s) of the ams-e package project.
@@ -50,7 +50,7 @@
 %%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{amsecol}
-  [2009/05/12 v0.1b Acta Mathematica Sinica
+  [2010/06/12 v0.1c Acta Mathematica Sinica
    collection document class]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \PassOptionsToClass{10pt,oneside,notitlepage}{book}
@@ -67,7 +67,7 @@
 \RequirePackage{ifpdf}
 \textheight      214mm%
 \textwidth       145mm%
-\topmargin       7.1mm%
+\topmargin       27.1mm%
 \oddsidemargin   -20pt%
 \evensidemargin  -20pt%
  %\headheight       15pt%

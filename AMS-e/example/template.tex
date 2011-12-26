@@ -1,158 +1,113 @@
-\documentclass{amse}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
+%%            NOTE: The content in this template, including title, authors' name and affiliation, and etc.
+%%                 is ONLY a sample for the author's guidance.
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{amse-new}
 
-\numberwithin{equation}{section}
+\numberwithin{equation}{section} %%% Equations numbered by section. If you don't want it, please delete it.
 
 \begin{document}
 
  \PageNum{1}
+ \Volume{201x}{Sep.}{x}{x}
+ \OnlineTime{August 15, 201x}
+ \DOI{0000000000000000}
+ \EditorNote{Received x x, 201x, accepted x x, 201x}
 
- \Volume{2009}{Jun.}{25}{1}
- \OnlineTime{July 1, 2009}
- \DOI{00000000000000}
-
- \EditorNote{Received December 28, 2006, Accepted
-May 23, 2008}
-
- \AuthorMark{Weiping Li}
- \TitleMark{Granny knots, Square knot}
-
-\title{Commutators with Finite Spectrum II\footnote{}}
-
-\author{Nadia BOUDI}
-    {D\'epartement de Math\'ematiques, Universit\'e  Moulay
-Ismail,\\ Facult\'e des Sciences B. P. $4010,$ Beni M'hamed,
-Meknes, Morocco\\
-    E-mail\,$:$ yzlee@bjut.edu.cn}
-
-
-\maketitle
+\abovedisplayskip 6pt plus 2pt minus 2pt \belowdisplayskip 6pt
+plus 2pt minus 2pt
+%%%%%%%%%%%%%%%%
+\def\vsp{\vspace{1mm}}
+\def\th#1{\vspace{1mm}\noindent{\bf #1}\quad}
+\def\proof{\vspace{1mm}\noindent{\it Proof}\quad}
+\def\no{\nonumber}
+\newenvironment{prof}[1][Proof]{\noindent\textit{#1}\quad }
+{\hfill $\Box$\vspace{0.7mm}}
+\def\q{\quad} \def\qq{\qquad}
+\allowdisplaybreaks[4]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%-------------------       Beginning of  Author's Definitions       -------------------%%
+%%                     Note: You may add your own definitions here.
 
 
- \Abstract{The purpose of this
-paper is to study derivations $d,d'$ defined on a Banach algebra
-$A$ such that the spectrum $ \sigma([dx,d'x])$ is finite for all
-$x \in A$. In particular we show that if the algebra is
-semisimple, then there exists an element $a$ in the socle of $A$
-such that $ [d,d']$ is the inner derivation implemented by $a$.}%
- \Keywords{47B47,
-47B48, 47A10}%
- \MRSubClass{47B47,
-47B48, 47A10}
+
+%%-------------------         the end of  Author's Definitions           -------------------%%
 
 
-\newcommand{\socle}{{\rm Soc}\,}
-\newcommand{\radic}{{\rm rad}\,}
-\newcommand{\densA}{{\mathscr A}}
-\newcommand{\Primi}{{\rm Prim}}
-\newcommand{\rg}{{\rm rank}\,}
-\newcommand{\dime}{{\rm dim}\,}
-\newcommand{\Kern}{{\rm Ker}\,}
+
+\AuthorMark{Surname1 F1. and Surname2 F2. }                             %%%  appear on the head of even pages  %%%
+
+\TitleMark{A Template for Journal}  %%% Running Title, appear on the head of odd pages  %%%
+
+\title{A Template for Journal        %%%   Main Title of your paper  %%%
+\footnote{The first author is supported by \ldots (Grant No. \ldots);
+the second author is supported by \ldots (Grant No. \ldots)}}                  %%%   the Fund which you are supported by  %%%
+
+\author{Firstname1 \uppercase{Surname1}}             %%%  1st Author's information   %%%
+    {Address\\
+    E-mail\,$:$ }
+
+\author{Firstname2 SURNAME2}     %%%  2nd Author's info, if exists, or you may delete this part directly  %%%
+    {Address\\
+    E-mail\,$:$  }
+
+\maketitle%
+
+
+\Abstract{Please make sure NO reference number in your Abstract since it is misunderstood independent of full text.}      % the abstract
+
+\Keywords{Aaaa, bbbb, cccc}        % the keywords
+
+\MRSubClass{05B05, 05B25, 20B25}      % MR(2000) Subject Classification
+
+%\baselineskip 15pt
 
 \section{Introduction}
 
-%\subsection{References and Citation}
+\subsection{A Subsection}
 
- Let $A$ be an algebra. By $[x,y]$ we denote the commutator
-$xy-yx$ of $x,y \in A$.  For each $a \in A$ let $\delta_a$ denote
-the inner derivation $\delta_a(x)= [a,x]$. A map $f: A\rightarrow
-A$ is called commuting  if $ [f(x),x]=0$ for all $x \in A$. A
-well-known theorem of Posner [1] states that if $d$ is a nonzero
-commuting derivation on a noncommutative prime ring $A$, then $d =
-0$. There are many ways how to extend this result either in the
-ring theory or in the Banach algebra theory (see [2] for a full
-account). The  classical  Kleinecke--Shirokov theorem
- reminiscents Posner's result; one of its versions can be stated as follows:
- If $d$ is a bounded derivation of a Banach algebra
-$A$ and $a\in A$ is such that $[da,a] =0$, then $da$ is
-quasi-nilpotent (see for instance [3]).  In [4] Bre\v sar
- showed that if $d$ is a bounded
-derivation on a Banach algebra $A$ such that $[dx,x]$ is
-quasi-nilpotent for all $x \in A$, then $dA$ is contained in the
-Jacobson radical  $\radic A $ of $A$. Furthermore, in [5] it was
-shown that the following  conditions are equivalent for a bounded
-derivation on a Banach algebra $A$:
+Please make sure that your paper contains correct reference
+sequence (If NOT, please resort them according to its appearance
+sequence, not alphabetical order. Moreover, please make sure that
+each bibliographical item is labelled and that these items are
+recalled using the command \verb|\cite{...}|, such as \cite{ref1},
+and \cite{ref2,ref3,ref4,ref5})
 
- (i)\; $[dx,x]$ has finite spectrum for every $x \in A$,
+All equations, theorems, definitions, lemmas, propositions,
+corollaries, examples, remarks etc. would be better to be numbered
+consecutively and unrepeatedly within each section. For example,
+Definition 2.1, Lemma 2.2, Theorem 2.3 \ldots.
 
- (ii)\; $dx$ has finite spectrum for every $x \in A$,
+Use \verb|\label| and \verb|\ref| or \verb|\eqref| to
+automatically cross-reference sections, equations, theorems and
+theorem-like environments, tables, figures, etc.
 
- (iii)\; There exists $a \in A$ such that $ a+  A \in \socle(A/ A) $ and $dx- \delta_a(x) \in  A$ for all $x \in
- A$.
+\begin{theorem}[\cite{ref2}]\label{th:1.1} %Theorem 1.1 could be recalled by using Theorem \ref{th:1.1}
+The statements of theorems, lemmas, definitions, propositions,
+corollaries, conjectures, etc. are set in italics, by using
+\begin{verbatim}
+\begin{theorem/lemma/definition/proposition/corollary/conjecture}
+\end{theorem/lemma/definition/proposition/corollary/conjecture}.
+\end{verbatim}
+\end{theorem}
 
- \noindent It should be pointed out that the second condition has
- been investigated earlier in [6] and~[7].  The proofs use extensively
- the Jacobson density theorem and its generalizations (see [8] and
-  [9, Extended Jacobson Density Theorem]).
+\begin{prof}  %you can also use the environment \begin{proof}\end{proof}
+Observe that
+\begin{align}\label{E:1.1}
+AAAAAAAAAA &= BBBBBBBBBBB\nonumber \\
+           &\quad + CCCCCCCCCC\nonumber \\
+           &= DDDDDDDDDDDDD.
+\end{align}
+Now apply induction on $n$ to \eqref{E:1.1}\ldots
+\end{prof}
 
- In this paper, we continue this line of investigation by
- considering derivations $d,d'$ on a complex Banach algebra $A$
- such that the spectrum $ \sigma([dx,d'x])$ is finite for every $x
- \in A$. We shall give a complete characterization of
-such $d$ and $d'$ in the case of primitive algebras. We also
-consider the special case where $[dx,d'x]$ is quasi-nilpotent for
-every $x \in A$.  It turns out that the recent generalization of
-the Jacobson density theorem
- given by Beidar and Bre\v{s}ar~[8, Theorem~5.2] allows us to
- treat the general case. Our main result establishes that for all
- but finitely many primitive ideals $P$ of $A$, $P$ is invariant
- under $d$ and $d'$ and $[d_Px, d_P'x]$ is quasi-nilpotent for all
- $x \in A/P$, where $d_P, d_P'$ denote the induced derivations on
- $A/P$. We also  consider the naturally
-arising question  whether our condition implies that $ [dx,d'x] +
- A \in  A/  A$ for every $x \in A$.
-
- This idea of studying derivations $d,d'$ of an algebra with the
- property that  commutators
-  $[dx,d'x]$ satisfy some special relation is by no means a novelty.
-  In [10], Lanski gave a characterization of derivations $d,d'$ of a
-  prime ring $R$ such that $[dx,d'x]=0$ for every $ x \in R$. A
-  considerably more general result was obtained later in [11]
-  and [12], where the authors considered additive maps
-  $f$ and derivations $d$ of a prime ring $R$ such that $
-  [f(x),dx]=0$ for every $x \in R$. \par This paper is organized as
-  follows. In the first section, which is purely algebraic, we
-  proceed with the study of dense algebras.  The second
-  section is devoted to our main results in  general Banach
-  algebras.
-
- Throughout this section, $X$ will be a vector space over
-${\mathbb C}$ and $\densA $ will be an algebra of linear operators
-on $X$ acting densely on~$X$. Let $d$ be a derivation on $\densA
-$. Following the terminology of~[6], we shall say that $d$ is {\it
-inner\/} if there is a linear operator $T$ on $X$ such that $dS=
-\delta_T (S)$ for every $S\in \densA $. Otherwise, $d$ will be
-called {\it outer}. As usual, $I$ denotes the identity mapping
-on~$X$ and $ \sharp F$ denotes the cardinality of a set $F$. The
-dual of $X$ will be denoted by $X^*$ and we will denote by $u
-\otimes f$ the linear operator on $X$ defined for any $u \in X$
-and $f \in X^*$ by $(u \otimes f)(x)=f(x)u$ for arbitrary $x \in
-X$.  If $ J \subset X$ and $x_1,\ldots ,x_n$ are vectors of $X$, $
-\langle J \rangle$ and  $\langle x_1,\ldots ,x_n \rangle$ will
-denote respectively their linear spans. Let $T$ be an operator on
-$X$. The \textit{ spectrum} of $T$ is $\sigma (T)= \{ \lambda \in
-{\mathbb C}: \lambda I- T \mbox { is not invertible } \}.$ The
-\textit{ point spectrum} of $T$ is $\sigma_p (T)=\{ \lambda \in
-{\mathbb C}: \lambda I - T \mbox { is not injective } \}$.
-
-Blablabla (cf. \cite{ref1}) bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla ...
-
-Blablabla (cf. \cite{ref1,ref2,ref3,ref4,ref5}) bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla b   la bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla ...
-
-Blablabla (cf. \cite{ref1,ref5}) bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla ...
-
+\begin{remark}\label{re:1.2}
+Remarks, examples, problems, etc. are set in roman type.
+\end{remark}
 
 
 \subsection{Table}
@@ -160,266 +115,50 @@ bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
 \begin{table}
 \begin{tabular}{|c|c|c|l|c|}
 \hline $P(x)$ & $i$& $(e(1),e(2),e(4))$ & $(e(3),e(6),e(12),e(24))$ & $T(E)$ \\
-\hline $P_1$  &    & & &$\varnothing$ \\
+\hline $P_1$  &    & & &$\emptyset$ \\
 \hline $P_2$  & 4  & & $(1,1,1,0)\rightarrow(0,0,0,1)$ &2\\
 \hline $P_3$  & 2  & &$(1,1,1,0)\rightarrow(0,0,2,0)$ &1\\
 \hline $P_4$  & 2  & $(0,1,1)\rightarrow(1,2,0)$ & &1\\
-\hline $P_5$  & 2  & $(0,1,1)\rightarrow(1,2,0)$ &$(1,1,1,0)\rightarrow(0,0,0,1)$ &1,2\\
+\hline $P_5$  & 2  & $(0,1,1)\rightarrow(1,2,0)$ &$(1,1,1,0)\rightarrow(0,0,0,1)$ &$1,2$\\
 \hline $P_6$  & 6  & $(0,1,1)\rightarrow(1,2,0)$ &$(1,1,1,0)\rightarrow(2,2,0,0)$ &1\\
 \hline $P_7$  & 3  & $(0,1,1)\rightarrow(1,0,1)$ &$(1,1,1,0)\rightarrow(2,0,1,0)$ &0\\
-\hline $P_8$  & 3  & $(0,1,1)\rightarrow(2,1,0)$ &$(1,1,1,0)\rightarrow(2,0,1,0) \rightarrow(3,1,0,0)$ &0,1\\
+\hline $P_8$  & 3  & $(0,1,1)\rightarrow(2,1,0)$ &$(1,1,1,0)\rightarrow(2,0,1,0) \rightarrow(3,1,0,0)$ &$0,1$\\
 \hline
 \end{tabular}
-\caption{distribution under the null hypothesis with}
+\caption{Aaa bbb ccc\label{tab}}
 \end{table}
 
 
 \subsection{Figure}
 
-\begin{figure}
-\includegraphics[scale=1.2]{actmark.eps}
-\caption{Q-Q plots of $2\xi_n$ and extreme distribution under the
-null hypothesis with sample sizes 200 and 400 when error
-distributions are standard normal distribution $N(0,1)$ and standard
-$t_2$ distribution}
-\end{figure}
+%\centerline{\includegraphics[scale=1.2]{actmark.eps}}
+%\centerline{\small Figure 1\quad Journal mark}
 
-
-\section{Theorems}
-
-\begin{thm}
-Let $f\in L^{2}(\mathbb R^{n})$ and $d \geq
-0$. Then
-\begin{equation}
-\int_{\mathbb R^{n}} \int_{\mathbb R^{n}} \frac{|f(x)|\,
-|\mathscr{F}{f}(y)|}{(1+|x|+|y|)^{d}}\, {\rm e}^{|x||y|}\,dxdy <
-\infty
-\end{equation}
-implies that
-$$
-f(x)=P(x){\rm e}^{-\langle Ax,x\rangle},
-$$
-where $A$ is a real positive definite symmetric matrix and $P$ is
-a polynomial of degree $<\frac{d-n}{2}$. In particular, for $d\leq
-n$, the function $f$ is identically $0.$
-\end{thm}
-
-\begin{proof}
-As shown in ...
-
-Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla ...
-\end{proof}
+\acknowledgements{\rm Thanks \ldots}
 
 
 
-\begin{lem}[Someone's Theorem \cite{ref2}]
-Let $f\in L^{2}(\mathbb R^{n})$ and $d \geq
-0$. Then
-\begin{equation}
-\int_{\mathbb R^{n}} \int_{\mathbb R^{n}} \frac{|f(x)|\,
-|\mathscr{F}{f}(y)|}{(1+|x|+|y|)^{d}}\, {\rm e}^{|x||y|}\,dxdy <
-\infty
-\end{equation}
-implies that
-$$
-f(x)=P(x){\rm e}^{-\langle Ax,x\rangle},
-$$
-where $A$ is a real positive definite symmetric matrix and $P$ is
-a polynomial of degree $<\frac{d-n}{2}$. In particular, for $d\leq
-n$, the function $f$ is identically $0.$
-\end{lem}
+\begin{thebibliography}{99}
 
+\bibitem{ref1} %% Journals %% surname(s), initial(s), article, journal, volume, relevant page numbers, year
+Lorenzini, D., Tucker, T. J.: The equations and the method of
+Chabauty--Coleman. \emph{Invent. Math.}, \textbf{148}, 1--46
+(2002)
 
-\begin{prop}
-Let $f\in L^{2}(\mathbb R^{n})$ and $d \geq
-0$. Then
-\begin{equation}
-\int_{\mathbb R^{n}} \int_{\mathbb R^{n}} \frac{|f(x)|\,
-|\mathscr{F}{f}(y)|}{(1+|x|+|y|)^{d}}\, {\rm e}^{|x||y|}\,dxdy <
-\infty
-\end{equation}
-implies that
-$$
-f(x)=P(x){\rm e}^{-\langle Ax,x\rangle},
-$$
-where $A$ is a real positive definite symmetric matrix and $P$ is
-a polynomial of degree $<\frac{d-n}{2}$. In particular, for $d\leq
-n$, the function $f$ is identically $0.$
-\end{prop}
+\bibitem{ref2} %% Books %% surname(s), initial(s), title, publisher, place of publication, year
+Huppert, B., Blackburn, N.: Finite Groups II, Springer-Verlag, New
+York, 1982
 
+\bibitem{ref3}
+Test
 
-\begin{cor}
-Let $f\in L^{2}(\mathbb R^{n})$ and $d \geq
-0$. Then
-\begin{equation}
-\int_{\mathbb R^{n}} \int_{\mathbb R^{n}} \frac{|f(x)|\,
-|\mathscr{F}{f}(y)|}{(1+|x|+|y|)^{d}}\, {\rm e}^{|x||y|}\,dxdy <
-\infty
-\end{equation}
-implies that
-$$
-f(x)=P(x){\rm e}^{-\langle Ax,x\rangle},
-$$
-where $A$ is a real positive definite symmetric matrix and $P$ is
-a polynomial of degree $<\frac{d-n}{2}$. In particular, for $d\leq
-n$, the function $f$ is identically $0.$
-\end{cor}
+\bibitem{ref4}
+Test
 
+\bibitem{ref5}
+Test
 
-\section{Algorithm}
-
-\begin{algo}
-Let $f\in L^{2}(\mathbb R^{n})$ and $d \geq
-0$. Then
-\begin{equation}
-\int_{\mathbb R^{n}} \int_{\mathbb R^{n}} \frac{|f(x)|\,
-|\mathscr{F}{f}(y)|}{(1+|x|+|y|)^{d}}\, {\rm e}^{|x||y|}\,dxdy <
-\infty
-\end{equation}
-implies that
-$$
-f(x)=P(x){\rm e}^{-\langle Ax,x\rangle},
-$$
-where $A$ is a real positive definite symmetric matrix and $P$ is
-a polynomial of degree $<\frac{d-n}{2}$. In particular, for $d\leq
-n$, the function $f$ is identically $0.$
-\end{algo}
-
-
-\section{Definitions}
-
-\begin{defn}
-Let $f\in L^{2}(\mathbb R^{n})$ and $d \geq
-0$. Then
-\begin{equation}
-\int_{\mathbb R^{n}} \int_{\mathbb R^{n}} \frac{|f(x)|\,
-|\mathscr{F}{f}(y)|}{(1+|x|+|y|)^{d}}\, {\rm e}^{|x||y|}\,dxdy <
-\infty
-\end{equation}
-implies that
-$$
-f(x)=P(x){\rm e}^{-\langle Ax,x\rangle},
-$$
-where $A$ is a real positive definite symmetric matrix and $P$ is
-a polynomial of degree $<\frac{d-n}{2}$. In particular, for $d\leq
-n$, the function $f$ is identically $0.$
-\end{defn}
-
-
-\begin{conj}
-Let $f\in L^{2}(\mathbb R^{n})$ and $d \geq
-0$. Then
-\begin{equation}
-\int_{\mathbb R^{n}} \int_{\mathbb R^{n}} \frac{|f(x)|\,
-|\mathscr{F}{f}(y)|}{(1+|x|+|y|)^{d}}\, {\rm e}^{|x||y|}\,dxdy <
-\infty
-\end{equation}
-implies that
-$$
-f(x)=P(x){\rm e}^{-\langle Ax,x\rangle},
-$$
-where $A$ is a real positive definite symmetric matrix and $P$ is
-a polynomial of degree $<\frac{d-n}{2}$. In particular, for $d\leq
-n$, the function $f$ is identically $0.$
-\end{conj}
-
-
-\begin{exmp}
-Let $f\in L^{2}(\mathbb R^{n})$ and $d \geq
-0$. Then
-\begin{equation}
-\int_{\mathbb R^{n}} \int_{\mathbb R^{n}} \frac{|f(x)|\,
-|\mathscr{F}{f}(y)|}{(1+|x|+|y|)^{d}}\, {\rm e}^{|x||y|}\,dxdy <
-\infty
-\end{equation}
-implies that
-$$
-f(x)=P(x){\rm e}^{-\langle Ax,x\rangle},
-$$
-where $A$ is a real positive definite symmetric matrix and $P$ is
-a polynomial of degree $<\frac{d-n}{2}$. In particular, for $d\leq
-n$, the function $f$ is identically $0.$
-\end{exmp}
-
-
-\begin{rem}
-Let $f\in L^{2}(\mathbb R^{n})$ and $d \geq
-0$. Then
-\begin{equation}
-\int_{\mathbb R^{n}} \int_{\mathbb R^{n}} \frac{|f(x)|\,
-|\mathscr{F}{f}(y)|}{(1+|x|+|y|)^{d}}\, {\rm e}^{|x||y|}\,dxdy <
-\infty
-\end{equation}
-implies that
-$$
-f(x)=P(x){\rm e}^{-\langle Ax,x\rangle},
-$$
-where $A$ is a real positive definite symmetric matrix and $P$ is
-a polynomial of degree $<\frac{d-n}{2}$. In particular, for $d\leq
-n$, the function $f$ is identically $0.$
-\end{rem}
-
-
-\begin{case}
-Let $f\in L^{2}(\mathbb R^{n})$ and $d \geq
-0$. Then
-\begin{equation}
-\int_{\mathbb R^{n}} \int_{\mathbb R^{n}} \frac{|f(x)|\,
-|\mathscr{F}{f}(y)|}{(1+|x|+|y|)^{d}}\, {\rm e}^{|x||y|}\,dxdy <
-\infty
-\end{equation}
-implies that
-$$
-f(x)=P(x){\rm e}^{-\langle Ax,x\rangle},
-$$
-where $A$ is a real positive definite symmetric matrix and $P$ is
-a polynomial of degree $<\frac{d-n}{2}$. In particular, for $d\leq
-n$, the function $f$ is identically $0.$
-\end{case}
-
-
-
-
-\acknowledgement{Thanks ....}
-
-
-
-\BeginRef
-
-\REF{ref1} Test.
-
-\REF{ref2} Test.
-
-\REF{ref3} Test.
-
-\REF{ref4} Test.
-
-\REF{ref5} Test.
-
-\REF{ref6} Test.
-
-\REF{ref7} Test.
-
-\REF{ref8} Test.
-
-\REF{ref9} Test.
-
-\REF{ref10} Test.
-
-\REF{another-ref1} Test.
-
-\REF{another-ref2} Test.
-
-\REF{another-ref3} Test.
-
-\REF{another-ref4} Test.
-
-\REF{another-ref5} Test.
-
-\EndRef
+\end{thebibliography}
 
 
 \end{document}
